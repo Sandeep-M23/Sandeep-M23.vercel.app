@@ -6,8 +6,8 @@ const NavLink = ({ children }) => (
     py={1}
     rounded={"md"}
     _hover={{
-      textDecoration: "none",
-      bg: useColorModeValue("gray.200", "gray.700"),
+      textDecorationLine: "underline",
+      textUnderlineOffset:'10px'
     }}
     href={children.toString().toLowerCase()}
   >
