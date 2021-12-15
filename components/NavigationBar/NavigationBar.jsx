@@ -4,7 +4,6 @@ import {
   Flex,
   Button,
   useDisclosure,
-  useColorModeValue,
   Stack,
   useColorMode,
   IconButton,
@@ -23,7 +22,7 @@ const NavigationBar = () => {
   const Links = ["About","Projects","Contact"];
   return (
     <>
-      <Box bg={useColorModeValue("gray.100", "gray.900")} p={8}>
+      <Box px={20} py={12}>
         <Flex h={16} alignItems={"center"} justifyContent={"space-between"}>
             <IconButton
               size={"md"}
@@ -39,7 +38,7 @@ const NavigationBar = () => {
           <Flex alignItems={"center"}>
             <HStack
               as={"nav"}
-              spacing={4}
+              spacing={8}
               display={{ base: "none", md: "flex" }}
             >
               {Links.map((link) => (
@@ -66,4 +65,3 @@ const NavigationBar = () => {
 };
 
 export default NavigationBar;
-
