@@ -1,21 +1,14 @@
-import React from 'react';
-import {
-    Center,
-    Heading,
-    Stack,
-    useColorModeValue,
-  } from '@chakra-ui/react';
-  
-const Card = () => {
-    return (
-      <Center py={6}>
-        <Stack>
-        <heading>
-        CARD COMPONENT
-        </heading>
-        </Stack>
-      </Center>
-    );
-  }
+import React from "react";
+import { Center, Heading, Stack, useColorModeValue } from "@chakra-ui/react";
 
-  export default Card;
+const Card = () => {
+  return (
+    <Center py={6}>
+      <Stack>
+        <Heading>CARD COMPONENT</Heading>
+      </Stack>
+    </Center>
+  );
+};
+
+export default Card;
