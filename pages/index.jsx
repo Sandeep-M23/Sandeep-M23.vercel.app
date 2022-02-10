@@ -1,36 +1,128 @@
-import { VStack, Box, Icon, Container,Text,Image,Flex } from "@chakra-ui/react";
-import { BsLinkedin, BsGithub,BsFillArrowRightSquareFill } from "react-icons/bs";
+import {
+  VStack,
+  Box,
+  Icon,
+  Container,
+  Text,
+  Image,
+  HStack,
+  Link,
+  Flex,
+  Heading,
+  useColorModeValue,
+} from "@chakra-ui/react";
+import {
+  BsLinkedin,
+  BsGithub,
+  BsFillArrowRightSquareFill,
+} from "react-icons/bs";
 import React from "react";
 
 const Home = () => {
+  const LinkBgDarkModeColor = "#091521";
+  const LinkBgLightModeColor = "#f4f1ee";
   return (
-    <Container maxW={"4xl"} centerContent mt={24}>
-      <Flex>
-      <VStack spacing={8} align={'flex-start'}>
-        <Box h={"40px"}>I&apos;m Sandeep M</Box>
-        <Box h={"40px"}>
-          A Web Developer! Currently pursuing 3rd year of Bachelor of
-          Engineering in Computer Science from JSS Academy of Technical
-          Education Bengaluru. I&apos;m a passionate learner who&apos;s always
-          willing to learn and work across new technologies
+    <Container maxW={"6xl"} mt={24}>
+      <HStack>
+        <VStack spacing={4} align={"flex-start"}>
+          <Box p={2}>
+            <Heading
+              size={"3xl"}
+            >
+              I&apos;m Sandeep M
+            </Heading>
+          </Box>
+          <Box p={2}>
+            <Text>
+              A Web Developer! Currently pursuing 3rd year of Bachelor of
+              Engineering in Computer Science from JSS Academy of Technical
+              Education Bengaluru. I&apos;m a passionate learner who&apos;s
+              always willing to learn and work across new technologies.
+            </Text>
+          </Box>
+          <Box p={2}>
+            View my{" "}
+            <Link
+              bg={useColorModeValue(LinkBgLightModeColor, LinkBgDarkModeColor)}
+              px={3}
+              py={2}
+              rounded={6}
+              _hover={{
+                textDecoration: "none",
+                bg: "red",
+              }}
+            >
+              Projects
+            </Link>
+            ,{"  "}
+            <Link
+              bg={useColorModeValue(LinkBgLightModeColor, LinkBgDarkModeColor)}
+              px={3}
+              py={2}
+              rounded={6}
+              _hover={{
+                textDecoration: "none",
+                bg: "red",
+              }}
+            >
+              Resume
+            </Link>
+            ,{"  "}
+            <Link
+              bg={useColorModeValue(LinkBgLightModeColor, LinkBgDarkModeColor)}
+              px={3}
+              py={2}
+              rounded={6}
+              _hover={{
+                textDecoration: "none",
+                bg: "red",
+              }}
+            >
+              Contact Me
+            </Link>
+            {"  "}
+            or send me an email at{"  "}
+            <Link
+              bg={useColorModeValue(LinkBgLightModeColor, LinkBgDarkModeColor)}
+              px={3}
+              py={2}
+              rounded={6}
+              _hover={{
+                textDecoration: "none",
+                bg: "red",
+              }}
+            >
+              sandeep.m24.rathnam@gmail.com
+            </Link>
+          </Box>
+          <Box p={2}>
+            <Link _hover={{ textDecoration: "none", color: "red" }}>
+              <Flex alignItems={"center"}>
+                <Text>See More About Me</Text>
+                <Icon as={BsFillArrowRightSquareFill} w={8} h={4} m={2} />
+              </Flex>
+            </Link>
+          </Box>
+          <Box p={2} display={"flex"} flexDir={"row"} alignItems={"center"}>
+            <Link _hover={{ color: "red" }}>
+              <Icon as={BsGithub} w={10} h={6} mr={2} />
+            </Link>
+            <Link _hover={{ color: "red" }}>
+              <Icon as={BsLinkedin} w={10} h={6} />
+            </Link>
+          </Box>
+        </VStack>
+
+        <Box width={"55%"}>
+          {/*ADD IMAGE LATER*/}
+          <Image
+            rounded={8}
+            maxW={"100%"}
+            src="https://bit.ly/dan-abramov"
+            alt="Dan Abramov"
+          />
         </Box>
-        <Box h={"40px"}>
-          View my Projects, Resume, Contact Me, or send me an email at
-          sandeep.m24.rathnam@gmail.com.
-        </Box>
-        <Box h={"40px"} alignItems={"center"} display={"flex"}>
-          <Text>See More About Me</Text>
-          <Icon as={BsFillArrowRightSquareFill} w={8} h={4} m={2} />
-        </Box>
-        <Box h={"40px"} display={"flex"} flexDir={"row"} alignItems={"center"}>
-          <Icon as={BsGithub} w={6} h={4} m={2} />
-          <Icon as={BsLinkedin} w={6} h={4} m={2} />
-        </Box>
-      </VStack>
-      <Box boxSize="sm">
-        <Image src="https://bit.ly/dan-abramov" alt="Dan Abramov" />
-      </Box>
-      </Flex>
+      </HStack>
     </Container>
   );
 };
