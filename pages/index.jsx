@@ -5,7 +5,6 @@ import {
   Container,
   Text,
   Image,
-  HStack,
   Link,
   Flex,
   Heading,
@@ -23,7 +22,6 @@ const Home = () => {
   const LinkBgLightModeColor = "#f4f1ee";
   return (
     <Container maxW={"6xl"} mt={24}>
-      <HStack>
         <VStack spacing={4} align={"flex-start"}>
           <Box p={2}>
             <Heading
@@ -112,17 +110,6 @@ const Home = () => {
             </Link>
           </Box>
         </VStack>
-
-        <Box width={"55%"}>
-          {/*ADD IMAGE LATER*/}
-          <Image
-            rounded={8}
-            maxW={"100%"}
-            src="https://bit.ly/dan-abramov"
-            alt="Dan Abramov"
-          />
-        </Box>
-      </HStack>
     </Container>
   );
 };
