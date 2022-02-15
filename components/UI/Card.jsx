@@ -1,11 +1,11 @@
 import React from "react";
-import { Center, Heading, Stack, useColorModeValue } from "@chakra-ui/react";
+import { Center, Text, Stack, useColorModeValue } from "@chakra-ui/react";
 
 const Card = () => {
   return (
     <Center py={6}>
       <Stack>
-        <Heading>CARD COMPONENT</Heading>
+       <Text>CARD COMPONENT</Text>
       </Stack>
     </Center>
   );
