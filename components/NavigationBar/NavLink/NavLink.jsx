@@ -6,6 +6,7 @@ const NavLink = ({ children }) => (
     py={1}
     rounded={"md"}
     _hover={{ textDecoration: "none" }}
+    _focus={{ outline: 'none' }}
     sx={{
       position: "relative",
       letterSpacing: "2px",
