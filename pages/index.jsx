@@ -4,7 +4,6 @@ import {
   Icon,
   Container,
   Text,
-  Image,
   Link,
   Flex,
   Heading,
