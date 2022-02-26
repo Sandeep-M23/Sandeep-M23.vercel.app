@@ -19,8 +19,6 @@ import React from "react";
 const Home = () => {
   const LinkBgDarkModeColor = "#272727";
   const LinkBgLightModeColor = "#f4f1ee";
-  const LightModeColor = "#fff";
-  const DarkModeColor = "#000";
 
   return (
     <Container maxW={"6xl"} mt={24}>
@@ -46,7 +44,7 @@ const Home = () => {
             _hover={{
               textDecoration: "none",
               bg: "red",
-              color:useColorModeValue(LightModeColor,DarkModeColor)
+              color:"white"
             }}
           >
             Projects
@@ -60,7 +58,7 @@ const Home = () => {
             _hover={{
               textDecoration: "none",
               bg: "red",
-              color:useColorModeValue(LightModeColor,DarkModeColor)
+              color:"white"
             }}
           >
             Resume
@@ -74,7 +72,7 @@ const Home = () => {
             _hover={{
               textDecoration: "none",
               bg: "red",
-              color:useColorModeValue(LightModeColor,DarkModeColor)
+              color:"white"
             }}
           >
             Contact Me
@@ -89,7 +87,7 @@ const Home = () => {
             _hover={{
               textDecoration: "none",
               bg: "red",
-              color:useColorModeValue(LightModeColor,DarkModeColor)
+              color:"white"
             }}
           >
             sandeep.m24.rathnam@gmail.com
