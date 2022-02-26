@@ -13,6 +13,7 @@ import {
 import {} from "@chakra-ui/icons";
 import { MoonIcon, SunIcon, HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
 import NavLink from './NavLink/NavLink';
+import Logo from '../UI/Logo';
 
 
 const NavigationBar = () => {
@@ -32,7 +33,7 @@ const NavigationBar = () => {
               onClick={isOpen ? onClose : onOpen}
             />
             <HStack spacing={8} alignItems={"center"}>
-              <Text>LOGO</Text>
+              <Logo/>
             </HStack>
 
           <Flex alignItems={"center"}>
