@@ -12,7 +12,7 @@ import {
   VStack,
   Heading,
   Text,
-  useColorModeValue
+  useColorModeValue,
 } from "@chakra-ui/react";
 import React from "react";
 import { BsPerson } from "react-icons/bs";
@@ -56,7 +56,7 @@ const Contact = () => {
             Got a question or proposal, or just want to say hello? Go ahead.
           </Text>
         </Stack>
-        <Box margin={6} mb={0} display={"flex"} >
+        <Box margin={6} mb={0} display={"flex"}>
           <ImageCard />
           <VStack
             spacing={3}
@@ -82,7 +82,7 @@ const Contact = () => {
                   }}
                   placeholder="Your Name"
                   _placeholder={{
-                    color:'gray.500'
+                    color: "gray.500",
                   }}
                 />
               </InputGroup>
@@ -102,7 +102,7 @@ const Contact = () => {
                   }}
                   placeholder="Your-Email@example.com"
                   _placeholder={{
-                    color:'gray.500'
+                    color: "gray.500",
                   }}
                 />
               </InputGroup>
@@ -118,7 +118,7 @@ const Contact = () => {
                 }}
                 placeholder="Subject"
                 _placeholder={{
-                  color:'gray.500'
+                  color: "gray.500",
                 }}
               />
             </FormControl>
@@ -131,7 +131,7 @@ const Contact = () => {
                 }}
                 placeholder="Your Message"
                 _placeholder={{
-                  color:'gray.500'
+                  color: "gray.500",
                 }}
               />
             </FormControl>

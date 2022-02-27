@@ -44,7 +44,7 @@ const Home = () => {
             _hover={{
               textDecoration: "none",
               bg: "red",
-              color:"white"
+              color: "white",
             }}
           >
             Projects
@@ -58,7 +58,7 @@ const Home = () => {
             _hover={{
               textDecoration: "none",
               bg: "red",
-              color:"white"
+              color: "white",
             }}
           >
             Resume
@@ -72,7 +72,7 @@ const Home = () => {
             _hover={{
               textDecoration: "none",
               bg: "red",
-              color:"white"
+              color: "white",
             }}
           >
             Contact Me
@@ -87,7 +87,7 @@ const Home = () => {
             _hover={{
               textDecoration: "none",
               bg: "red",
-              color:"white"
+              color: "white",
             }}
           >
             sandeep.m24.rathnam@gmail.com
