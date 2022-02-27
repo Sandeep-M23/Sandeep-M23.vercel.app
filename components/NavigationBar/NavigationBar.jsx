@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import {
   Box,
   Flex,
@@ -10,31 +10,35 @@ import {
   Text,
   HStack,
 } from "@chakra-ui/react";
-import {} from "@chakra-ui/icons";
 import { MoonIcon, SunIcon, HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
-import NavLink from './NavLink/NavLink';
-import Logo from '../UI/Logo';
-
+import NavLink from "./NavLink/NavLink";
+import Logo from "../UI/Logo";
 
 const NavigationBar = () => {
   const { colorMode, toggleColorMode } = useColorMode();
   const { isOpen, onOpen, onClose } = useDisclosure();
 
-  const Links = ["About","Projects","Contact"];
+  const routes = [
+    { name: "About", link: "/about" },
+    { name: "Projects", link: "/projects" },
+    { name: "Contact", link: "/contact" },
+  ];
+
   return (
     <>
-      <Box px={20} py={12}>
+      <Box px={20} py={10}>
         <Flex h={16} alignItems={"center"} justifyContent={"space-between"}>
-            <IconButton
-              size={"md"}
-              icon={isOpen ? <CloseIcon /> : <HamburgerIcon />}
-              aria-label={"Open Menu"}
-              display={{ md: "none" }}
-              onClick={isOpen ? onClose : onOpen}
-            />
-            <HStack spacing={8} alignItems={"center"}>
-              <Logo/>
-            </HStack>
+          <IconButton
+            size={"md"}
+            icon={isOpen ? <CloseIcon /> : <HamburgerIcon />}
+            aria-label={"Open Menu"}
+            display={{ md: "none" }}
+            onClick={isOpen ? onClose : onOpen}
+            _focus={{ outline: "none" }}
+          />
+          <HStack spacing={8} alignItems={"center"}>
+            <Logo />
+          </HStack>
 
           <Flex alignItems={"center"}>
             <HStack
@@ -42,10 +46,12 @@ const NavigationBar = () => {
               spacing={8}
               display={{ base: "none", md: "flex" }}
             >
-              {Links.map((link) => (
-                <NavLink key={link}>{link}</NavLink>
+              {routes.map((link) => (
+                <NavLink key={link.name} link={link.link}>
+                  {link.name}
+                </NavLink>
               ))}
-              <Button onClick={toggleColorMode}>
+              <Button onClick={toggleColorMode} _focus={{ outline: "none" }}>
                 {colorMode === "light" ? <MoonIcon /> : <SunIcon />}
               </Button>
             </HStack>
@@ -54,8 +60,10 @@ const NavigationBar = () => {
         {isOpen ? (
           <Box pb={4} display={{ md: "none" }}>
             <Stack as={"nav"} spacing={4}>
-              {Links.map((link) => (
-                <NavLink key={link}>{link}</NavLink>
+              {routes.map((link) => (
+                <NavLink key={link.name} link={link.link}>
+                  {link.name}
+                </NavLink>
               ))}
             </Stack>
           </Box>
