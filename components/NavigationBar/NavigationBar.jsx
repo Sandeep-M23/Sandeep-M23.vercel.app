@@ -12,7 +12,7 @@ import {
 } from "@chakra-ui/react";
 import { MoonIcon, SunIcon, HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
 import NavLink from "./NavLink/NavLink";
-import Logo from "../UI/Logo";
+import Logo from "../UI/Logo/Logo";
 
 const NavigationBar = () => {
   const { colorMode, toggleColorMode } = useColorMode();
