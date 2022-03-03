@@ -12,12 +12,11 @@ import {
   VStack,
   Heading,
   Text,
-  useColorModeValue,
 } from "@chakra-ui/react";
 import React from "react";
 import { BsPerson } from "react-icons/bs";
 import { MdOutlineEmail } from "react-icons/md";
-import ImageCard from "../components/UI/ImageCard";
+import ImageCard from "../components/UI/Card/ImageCard";
 
 const Contact = () => {
   return (
@@ -28,7 +27,6 @@ const Contact = () => {
             fontSize={"2.5rem"}
             position={"relative"}
             textAlign="center"
-            color={"red.600"}
             maxW={"600px"}
             _before={{
               position: "absolute",

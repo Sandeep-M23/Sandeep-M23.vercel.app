@@ -14,7 +14,7 @@ import {
 import { MdCheckCircle } from "react-icons/md";
 import { BsCircleFill } from "react-icons/bs";
 import React from "react";
-import Stepper from "../components/UI/Stepper";
+import Stepper from "../components/UI/Stepper/Stepper";
 
 const data = [
   {
