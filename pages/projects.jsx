@@ -25,13 +25,13 @@ const Projects = () => {
           <Divider height={"3px"} bg={"red"}/>
         </Box>
         <Grid templateColumns='repeat(3, 1fr)' gap={4}>
-        <ProjectCard />
+          <ProjectCard />
           <ProjectCard />
           <ProjectCard />
           <ProjectCard />
           <ProjectCard />
           <ProjectCard/>
-</Grid>
+       </Grid>
       </Flex>
     </Container>
   );
