@@ -58,7 +58,8 @@ const FeaturedCard = ({cardDir,cardPos,cardAlign,imagePos}) => {
           <Heading>Project Name</Heading>
           <Text bg={"red"} p={4} rounded={8} mt={6}>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua
+            eiusmod tempor incididunt ut labore et dolore magna aliqua sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore
           </Text>
           <HStack spacing={6} my={3} color={'#c1c1c1'} fontWeight={500}>
             <Text>HTML5</Text>
