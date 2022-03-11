@@ -8,8 +8,8 @@ import {
   Flex,
   Heading,
   useColorModeValue,
-  keyframes, 
-  usePrefersReducedMotion
+  keyframes,
+  usePrefersReducedMotion,
 } from "@chakra-ui/react";
 import {
   BsLinkedin,
@@ -237,19 +237,19 @@ const glitchBottom = keyframes`
 const Home = () => {
   const LinkBgDarkModeColor = "#272727";
   const LinkBgLightModeColor = "#f4f1ee";
-  const prefersReducedMotion = usePrefersReducedMotion()
+  const prefersReducedMotion = usePrefersReducedMotion();
 
   const animation = prefersReducedMotion
     ? undefined
-    : `${glitch} 5s linear infinite`
+    : `${glitch} 5s linear infinite`;
 
   const animationTop = prefersReducedMotion
-  ? undefined
-  : `${glitchTop} 3s linear alternate-reverse infinite`
+    ? undefined
+    : `${glitchTop} 3s linear alternate-reverse infinite`;
 
   const animationBottom = prefersReducedMotion
-  ? undefined
-  : `${glitchBottom} 5s linear alternate-reverse infinite`
+    ? undefined
+    : `${glitchBottom} 5s linear alternate-reverse infinite`;
 
   return (
     <Container maxW={"6xl"} mt={24}>
@@ -261,7 +261,7 @@ const Home = () => {
             position="relative"
             zIndex="1"
             left="0"
-            right= "0"
+            right="0"
             bottom="0"
             _before={{
               position: "absolute",

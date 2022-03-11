@@ -10,10 +10,10 @@ import {
   useColorModeValue,
   HStack,
   Flex,
-} from '@chakra-ui/react';
-import {FiFolder,FiExternalLink} from 'react-icons/fi';
-import {AiOutlineHtml5} from 'react-icons/ai'
-import {BsGithub} from 'react-icons/bs';
+} from "@chakra-ui/react";
+import { FiFolder, FiExternalLink } from "react-icons/fi";
+import { AiOutlineHtml5 } from "react-icons/ai";
+import { BsGithub } from "react-icons/bs";
 
 const ProjectCard = () => {
   return (
@@ -28,7 +28,7 @@ const ProjectCard = () => {
         textAlign={"center"}
       >
         <Flex flexDir={"row"} justify={"space-between"} align={"center"}>
-          <Icon as={FiFolder} w={12} h={12} color={'red.500'}/>
+          <Icon as={FiFolder} w={12} h={12} color={"red.500"} />
           <HStack spacing={4}>
             <Link href="#">
               <Icon as={BsGithub} w={6} h={6} />

@@ -9,17 +9,17 @@ import {
   Text,
   HStack,
   Icon,
-} from '@chakra-ui/react';
-import {FiExternalLink} from 'react-icons/fi';
-import {BsGithub} from 'react-icons/bs';
+} from "@chakra-ui/react";
+import { FiExternalLink } from "react-icons/fi";
+import { BsGithub } from "react-icons/bs";
 
-const FeaturedCard = ({cardDir,cardPos,cardAlign,imagePos}) => {
+const FeaturedCard = ({ cardDir, cardPos, cardAlign, imagePos }) => {
   return (
     <Center py={6}>
       <Stack
         borderRadius="lg"
         w={{ base: "100%" }}
-        height={{ sm: "476px", md: "30rem", lg:'27rem' }}
+        height={{ sm: "476px", md: "30rem", lg: "27rem" }}
         direction={{ base: "column", md: cardDir }}
         padding={4}
       >
@@ -58,10 +58,11 @@ const FeaturedCard = ({cardDir,cardPos,cardAlign,imagePos}) => {
           <Heading>Project Name</Heading>
           <Text bg={"red"} p={4} rounded={8} mt={6}>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore
+            eiusmod tempor incididunt ut labore et dolore magna aliqua sit amet,
+            consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+            labore et dolore
           </Text>
-          <HStack spacing={6} my={3} color={'#c1c1c1'} fontWeight={500}>
+          <HStack spacing={6} my={3} color={"#c1c1c1"} fontWeight={500}>
             <Text>HTML5</Text>
             <Text>CSS3</Text>
           </HStack>
