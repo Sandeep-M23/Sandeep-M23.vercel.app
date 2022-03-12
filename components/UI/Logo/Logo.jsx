@@ -1,12 +1,17 @@
 import React from "react";
-import { Box, Image, Link } from "@chakra-ui/react";
+import { Box, Image, Link,useColorMode } from "@chakra-ui/react";
 
 const Logo = () => {
+  const { colorMode } = useColorMode();
   return (
     <Box>
       <Link href="/" _focus={{ outline: "none" }}>
         <Image
-          src="/assests/images/logo.png"
+          src={
+            colorMode === "light"
+              ? "/assests/images/LightLogo.png"
+              : "/assests/images/DarkLogo.png"
+          }
           alt="Logo"
           maxW={"60px"}
           h={"auto"}
