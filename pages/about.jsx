@@ -15,6 +15,7 @@ import { MdCheckCircle } from "react-icons/md";
 import { BsCircleFill } from "react-icons/bs";
 import React from "react";
 import Stepper from "../components/UI/Stepper/Stepper";
+import {motion} from 'framer-motion';
 
 const data = [
   {
@@ -48,13 +49,10 @@ const About = () => {
               <Divider height={"3px"} bg={"red"} />
             </Box>
             <Text>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-              facilisis suscipit sagittis. Sed porta a felis ut fringilla.
-              Maecenas luctus dolor ligula, vel pellentesque libero auctor et.
-              Duis mollis accumsan neque eget lacinia. Proin ultrices molestie
-              sagittis. Vivamus laoreet ipsum lectus, ac lobortis tortor varius
-              non. Nunc consectetur purus in mi euismod, quis malesuada velit
-              egestas.
+              I started my journey by learning basics of Web Development and making small web Applications using HTML,CSS & Javascript.
+              Later learnt MERN Stack and began building full stack web applications and have worked on few projects.
+              I'm currently working on improving my data structure and Algorithm skills. 
+              I'm a passionate learner who's always willing to learn and work across new technologies.
             </Text>
           </Box>
           <Box width={"100%"}>
