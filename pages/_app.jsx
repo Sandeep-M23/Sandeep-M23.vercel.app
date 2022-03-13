@@ -2,10 +2,9 @@ import { ChakraProvider } from "@chakra-ui/react";
 import NavigationBar from "../components/NavigationBar/NavigationBar";
 import Head from "next/head";
 import theme from "../styles/theme";
-import {motion,AnimatePresence} from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 
-const App = ({ Component, pageProps,router }) => {
-  
+const App = ({ Component, pageProps, router }) => {
   return (
     <>
       <Head>
@@ -38,7 +37,7 @@ const App = ({ Component, pageProps,router }) => {
               },
             }}
           >
-            <Component {...pageProps} key={router.route}/>
+            <Component {...pageProps} key={router.route} />
           </motion.div>
         </AnimatePresence>
       </ChakraProvider>
