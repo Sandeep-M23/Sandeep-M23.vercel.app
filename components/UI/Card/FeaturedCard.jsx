@@ -13,14 +13,14 @@ import {
 import { FiExternalLink } from "react-icons/fi";
 import { BsGithub } from "react-icons/bs";
 
-const FeaturedCard = ({ cardDir, cardPos, cardAlign, imagePos }) => {
+const FeaturedCard = ({data}) => {
   return (
     <Center py={6}>
       <Stack
         borderRadius="lg"
         w={{ base: "100%" }}
         height={{ sm: "476px", md: "30rem", lg: "27rem" }}
-        direction={{ base: "column", md: cardDir }}
+        direction={{ base: "column", md: data.cardDir }}
         padding={4}
       >
         <Flex
@@ -29,7 +29,7 @@ const FeaturedCard = ({ cardDir, cardPos, cardAlign, imagePos }) => {
           w={"50%"}
           h={"85%"}
           position={"relative"}
-          right={imagePos}
+          right={data.imagePos}
           overflow={"hidden"}
         >
           <Image
@@ -48,29 +48,26 @@ const FeaturedCard = ({ cardDir, cardPos, cardAlign, imagePos }) => {
           flex={0.9}
           flexDirection="column"
           justifyContent="flex-start"
-          alignItems={cardAlign}
+          alignItems={data.cardAlign}
           p={1}
           position={"relative"}
-          right={cardPos}
+          right={data.cardPos}
           pt={2}
         >
           <Text color="red.600">Featured Project</Text>
-          <Heading>Project Name</Heading>
+          <Heading>{data.title}</Heading>
           <Text bg={"red"} p={4} rounded={8} mt={6}>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua sit amet,
-            consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-            labore et dolore
+           {data.description}
           </Text>
           <HStack spacing={6} my={3} color={"#c1c1c1"} fontWeight={500}>
             <Text>HTML5</Text>
             <Text>CSS3</Text>
           </HStack>
           <HStack spacing={6} my={2}>
-            <Link href="#">
+            <Link href={data.github}>
               <Icon as={BsGithub} w={6} h={6} />
             </Link>
-            <Link href="#">
+            <Link href={data.link}>
               <Icon as={FiExternalLink} w={6} h={6} />
             </Link>
           </HStack>

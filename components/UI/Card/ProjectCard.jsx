@@ -15,7 +15,7 @@ import { FiFolder, FiExternalLink } from "react-icons/fi";
 import { AiOutlineHtml5 } from "react-icons/ai";
 import { BsGithub } from "react-icons/bs";
 
-const ProjectCard = () => {
+const ProjectCard = ({data}) => {
   return (
     <Center py={6}>
       <Box
@@ -30,19 +30,18 @@ const ProjectCard = () => {
         <Flex flexDir={"row"} justify={"space-between"} align={"center"}>
           <Icon as={FiFolder} w={12} h={12} color={"red.500"} />
           <HStack spacing={4}>
-            <Link href="#">
+            <Link href={data.github}>
               <Icon as={BsGithub} w={6} h={6} />
             </Link>
-            <Link href="#">
+            <Link href={data.link}>
               <Icon as={FiExternalLink} w={6} h={6} />
             </Link>
           </HStack>
         </Flex>
         <Stack spacing={4} m={4} p={2}>
-          <Heading>Project Name</Heading>
+          <Heading>{data.title}</Heading>
           <Text>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua
+            {data.description}
           </Text>
         </Stack>
         <HStack>
