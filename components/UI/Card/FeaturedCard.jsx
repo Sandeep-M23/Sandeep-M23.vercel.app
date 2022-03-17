@@ -64,10 +64,10 @@ const FeaturedCard = ({data}) => {
             <Text>CSS3</Text>
           </HStack>
           <HStack spacing={6} my={2}>
-            <Link href={data.github}>
+            <Link href={data.github} isExternal>
               <Icon as={BsGithub} w={6} h={6} />
             </Link>
-            <Link href={data.link}>
+            <Link href={data.link} isExternal>
               <Icon as={FiExternalLink} w={6} h={6} />
             </Link>
           </HStack>

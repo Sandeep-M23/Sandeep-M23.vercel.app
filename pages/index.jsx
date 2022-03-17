@@ -107,6 +107,7 @@ const Home = () => {
               color: "white",
             }}
             _focus={{ outline: "none" }}
+            isExternal
           >
             sandeep.m24.rathnam@gmail.com
           </Link>
@@ -120,11 +121,12 @@ const Home = () => {
           </Link>
         </Box>
         <Box p={2} display={"flex"} flexDir={"row"} alignItems={"center"}>
-          <Link href="https://github.com/Sandeep-M23" _hover={{ color: "red" }} _focus={{ outline: "none" }}>
+          <Link href="https://github.com/Sandeep-M23" _hover={{ color: "red" }} _focus={{ outline: "none" }} isExternal>
             <Icon as={BsGithub} w={10} h={6} mr={2} />
           </Link>
           <Link
             href="https://www.linkedin.com/in/sandeep-m23/"
+            isExternal
             _hover={{ color: "red" }}
             _focus={{ outline: "none" }}
           >

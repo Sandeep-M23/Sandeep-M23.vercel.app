@@ -30,10 +30,10 @@ const ProjectCard = ({data}) => {
         <Flex flexDir={"row"} justify={"space-between"} align={"center"}>
           <Icon as={FiFolder} w={12} h={12} color={"red.500"} />
           <HStack spacing={4}>
-            <Link href={data.github}>
+            <Link href={data.github} isExternal>
               <Icon as={BsGithub} w={6} h={6} />
             </Link>
-            <Link href={data.link}>
+            <Link href={data.link} isExternal>
               <Icon as={FiExternalLink} w={6} h={6} />
             </Link>
           </HStack>
