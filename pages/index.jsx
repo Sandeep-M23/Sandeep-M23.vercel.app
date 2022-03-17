@@ -65,11 +65,13 @@ const Home = () => {
             px={3}
             py={2}
             rounded={6}
+            href="/projects"
             _hover={{
               textDecoration: "none",
               bg: "red",
               color: "white",
             }}
+            _focus={{ outline: "none" }}
           >
             Projects
           </Link>
@@ -79,25 +81,13 @@ const Home = () => {
             px={3}
             py={2}
             rounded={6}
+            href="/contact"
             _hover={{
               textDecoration: "none",
               bg: "red",
               color: "white",
             }}
-          >
-            Resume
-          </Link>
-          ,{"  "}
-          <Link
-            bg={useColorModeValue(LinkBgLightModeColor, LinkBgDarkModeColor)}
-            px={3}
-            py={2}
-            rounded={6}
-            _hover={{
-              textDecoration: "none",
-              bg: "red",
-              color: "white",
-            }}
+            _focus={{ outline: "none" }}
           >
             Contact Me
           </Link>
@@ -105,6 +95,9 @@ const Home = () => {
           or send me an email at{"  "}
           <Link
             bg={useColorModeValue(LinkBgLightModeColor, LinkBgDarkModeColor)}
+            href="mailto:sandeep.m24.rathanm@gmail.com"
+            target="_blank"
+            rel="noreferrer"
             px={3}
             py={2}
             rounded={6}
@@ -113,12 +106,13 @@ const Home = () => {
               bg: "red",
               color: "white",
             }}
+            _focus={{ outline: "none" }}
           >
             sandeep.m24.rathnam@gmail.com
           </Link>
         </Box>
         <Box p={2}>
-          <Link _hover={{ textDecoration: "none", color: "red" }}>
+          <Link href="/about" _hover={{ textDecoration: "none", color: "red" }} _focus={{ outline: "none" }}>
             <Flex alignItems={"center"}>
               <Text>See More About Me</Text>
               <Icon as={BsFillArrowRightSquareFill} w={8} h={4} m={2} />
@@ -126,10 +120,14 @@ const Home = () => {
           </Link>
         </Box>
         <Box p={2} display={"flex"} flexDir={"row"} alignItems={"center"}>
-          <Link _hover={{ color: "red" }}>
+          <Link href="https://github.com/Sandeep-M23" _hover={{ color: "red" }} _focus={{ outline: "none" }}>
             <Icon as={BsGithub} w={10} h={6} mr={2} />
           </Link>
-          <Link _hover={{ color: "red" }}>
+          <Link
+            href="https://www.linkedin.com/in/sandeep-m23/"
+            _hover={{ color: "red" }}
+            _focus={{ outline: "none" }}
+          >
             <Icon as={BsLinkedin} w={10} h={6} />
           </Link>
         </Box>
