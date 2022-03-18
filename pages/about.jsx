@@ -10,6 +10,7 @@ import {
   Heading,
   Divider,
   Icon,
+  Stack,
 } from "@chakra-ui/react";
 import { MdCheckCircle } from "react-icons/md";
 import { BsCircleFill } from "react-icons/bs";
@@ -41,8 +42,16 @@ const data = [
 const About = () => {
   return (
     <Container maxW={"6xl"} mt={8}>
-      <HStack spacing={28} alignItems={"flex-start"}>
-        <VStack spacing={12} align={"flex-start"} width={"53%"}>
+      <Stack
+        spacing={{ base: 14, lg: 28 }}
+        alignItems={"flex-start"}
+        direction={{ base: "column", lg: "row" }}
+      >
+        <VStack
+          spacing={12}
+          align={"flex-start"}
+          width={{ base: "100%", lg: "53%" }}
+        >
           <Box>
             <Box mb={4}>
               <Heading mb={2}>ABOUT ME</Heading>
@@ -112,7 +121,7 @@ const About = () => {
           ))}
           <Icon width={5} height={5} mx={2} as={BsCircleFill} color={"red"} />
         </Box>
-      </HStack>
+      </Stack>
     </Container>
   );
 };

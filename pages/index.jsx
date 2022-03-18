@@ -34,11 +34,11 @@ const Home = () => {
     : `${glitch} 6s ease-in-out reverse infinite`;
 
   return (
-    <Container maxW={"6xl"} mt={24}>
+    <Container maxW={"6xl"} mt={{base:12,lg:24}}>
       <VStack spacing={4} align={"flex-start"}>
         <Box p={2}>
           <Heading
-            size={"3xl"}
+            fontSize={{base:'2.3rem',lg:'3.5rem'}}
             animation={animation}
             textTransform=" uppercase"
             backgroundImage="linear-gradient(245deg, #f4f1ee 0%, #FED7D7 29%,#F56565  49%,#C53030 67%,#822727 100%)"
@@ -58,7 +58,7 @@ const Home = () => {
             willing to learn and work across new technologies.
           </Text>
         </Box>
-        <Box p={2}>
+        <Box p={2} lineHeight={{base:10}}>
           View my{" "}
           <Link
             bg={useColorModeValue(LinkBgLightModeColor, LinkBgDarkModeColor)}
@@ -92,7 +92,7 @@ const Home = () => {
             Contact Me
           </Link>
           {"  "}
-          or send me an email at{"  "}
+          or send me an email at{"   "}
           <Link
             bg={useColorModeValue(LinkBgLightModeColor, LinkBgDarkModeColor)}
             href="mailto:sandeep.m24.rathanm@gmail.com"

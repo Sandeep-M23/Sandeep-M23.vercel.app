@@ -1,12 +1,11 @@
 import React from "react";
 import {
   Container,
-  HStack,
   Heading,
   Flex,
   Box,
   Divider,
-  Grid,
+  SimpleGrid,
 } from "@chakra-ui/react";
 import ProjectCard from "../components/UI/Card/ProjectCard";
 import FeaturedCard from "../components/UI/Card/FeaturedCard";
@@ -98,11 +97,14 @@ const Projects = () => {
           </Heading>
           <Divider height={"3px"} bg={"red"} />
         </Box>
-        <Grid templateColumns="repeat(3, 1fr)" gap={4}>
+        <SimpleGrid
+          columns={{ base: 1, md: 2, lg: 3 }}
+          gap={{ base: 1, md: 2, lg: 4 }}
+        >
           {ProjectCardDetails.map((data, key) => {
             return <ProjectCard key={key} data={data} />;
           })}
-        </Grid>
+        </SimpleGrid>
       </Flex>
     </Container>
   );
