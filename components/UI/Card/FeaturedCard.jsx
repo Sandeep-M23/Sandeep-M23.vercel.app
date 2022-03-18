@@ -9,6 +9,7 @@ import {
   Text,
   HStack,
   Icon,
+  useColorModeValue,
 } from "@chakra-ui/react";
 import { FiExternalLink } from "react-icons/fi";
 import { BsGithub } from "react-icons/bs";
@@ -22,14 +23,15 @@ const FeaturedCard = ({data}) => {
         height={{ sm: "476px", md: "30rem", lg: "27rem" }}
         direction={{ base: "column", md: data.cardDir }}
         padding={4}
+        bg={useColorModeValue("#f4f1ee", "#272727")}
       >
         <Flex
           flex={1}
           bg="#2727277d"
-          w={"50%"}
+          w={{ base: "100%", lg: "50%" }}
           h={"85%"}
           position={"relative"}
-          right={data.imagePos}
+          right={{ base: 0, md: data.imagePos }}
           overflow={"hidden"}
         >
           <Image
@@ -48,16 +50,16 @@ const FeaturedCard = ({data}) => {
           flex={0.9}
           flexDirection="column"
           justifyContent="flex-start"
-          alignItems={data.cardAlign}
+          alignItems={{ base: "flex-start", md: data.cardAlign }}
           p={1}
           position={"relative"}
-          right={data.cardPos}
+          right={{ base: 0, md: data.cardPos }}
           pt={2}
         >
           <Text color="red.600">Featured Project</Text>
           <Heading>{data.title}</Heading>
-          <Text bg={"red"} p={4} rounded={8} mt={6}>
-           {data.description}
+          <Text bg={"red"} p={4} rounded={8} mt={{base:2,md:6}}>
+            {data.description}
           </Text>
           <HStack spacing={6} my={3} color={"#c1c1c1"} fontWeight={500}>
             <Text>HTML5</Text>

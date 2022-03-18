@@ -17,7 +17,7 @@ import { BsGithub } from "react-icons/bs";
 
 const ProjectCard = ({data}) => {
   return (
-    <Center py={6}>
+    <Center py={{base:2,lg:6}}>
       <Box
         maxW={"500px"}
         w={"full"}

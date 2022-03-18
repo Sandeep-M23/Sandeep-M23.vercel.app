@@ -14,19 +14,19 @@ import { MoonIcon, SunIcon, HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
 import NavLink from "./NavLink/NavLink";
 import Logo from "../UI/Logo/Logo";
 
+const routes = [
+  { name: "About", link: "/about" },
+  { name: "Projects", link: "/projects" },
+  { name: "Contact", link: "/contact" },
+];
+
 const NavigationBar = () => {
   const { colorMode, toggleColorMode } = useColorMode();
   const { isOpen, onOpen, onClose } = useDisclosure();
 
-  const routes = [
-    { name: "About", link: "/about" },
-    { name: "Projects", link: "/projects" },
-    { name: "Contact", link: "/contact" },
-  ];
-
   return (
     <>
-      <Box px={20} py={10}>
+      <Box px={{ base: 5, lg: 20 }} py={10}>
         <Flex h={16} alignItems={"center"} justifyContent={"space-between"}>
           <IconButton
             size={"md"}
@@ -39,22 +39,22 @@ const NavigationBar = () => {
           <HStack spacing={8} alignItems={"center"}>
             <Logo />
           </HStack>
-
           <Flex alignItems={"center"}>
             <HStack
               as={"nav"}
               spacing={8}
               display={{ base: "none", md: "flex" }}
+              mx={12}
             >
               {routes.map((link) => (
                 <NavLink key={link.name} link={link.link}>
                   {link.name}
                 </NavLink>
               ))}
-              <Button onClick={toggleColorMode} _focus={{ outline: "none" }}>
-                {colorMode === "light" ? <MoonIcon /> : <SunIcon />}
-              </Button>
             </HStack>
+            <Button onClick={toggleColorMode} _focus={{ outline: "none" }}>
+              {colorMode === "light" ? <MoonIcon /> : <SunIcon />}
+            </Button>
           </Flex>
         </Flex>
         {isOpen ? (
