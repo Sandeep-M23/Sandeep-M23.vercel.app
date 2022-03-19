@@ -9,8 +9,8 @@ const Logo = () => {
         <Image
           src={
             colorMode === "light"
-              ? "/assests/images/LightLogo.png"
-              : "/assests/images/DarkLogo.png"
+              ? "/assests/images/Logo/LightLogo.png"
+              : "/assests/images/Logo/DarkLogo.png"
           }
           alt="Logo"
           maxW={"60px"}
