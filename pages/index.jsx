@@ -34,16 +34,16 @@ const Home = () => {
     : `${glitch} 6s ease-in-out reverse infinite`;
 
   return (
-    <Container maxW={"6xl"} mt={{base:12,lg:24}}>
+    <Container maxW={"6xl"} mt={{ base: 12, lg: 24 }}>
       <VStack spacing={4} align={"flex-start"}>
         <Box p={2}>
           <Heading
-            fontSize={{base:'2.3rem',lg:'3.5rem'}}
+            fontSize={{ base: "2.3rem", lg: "3.5rem" }}
             animation={animation}
             textTransform=" uppercase"
             backgroundImage="linear-gradient(245deg, #f4f1ee 0%, #FED7D7 29%,#F56565  49%,#C53030 67%,#822727 100%)"
             backgroundSize="200% auto"
-            textFillColor="transparent"
+            textfillcolor="transparent"
             backgroundClip="text"
             display="inline-block"
           >
@@ -58,7 +58,7 @@ const Home = () => {
             willing to learn and work across new technologies.
           </Text>
         </Box>
-        <Box p={2} lineHeight={{base:10}}>
+        <Box p={2} lineHeight={{ base: 10 }}>
           View my{" "}
           <Link
             bg={useColorModeValue(LinkBgLightModeColor, LinkBgDarkModeColor)}
@@ -113,7 +113,11 @@ const Home = () => {
           </Link>
         </Box>
         <Box p={2}>
-          <Link href="/about" _hover={{ textDecoration: "none", color: "red" }} _focus={{ outline: "none" }}>
+          <Link
+            href="/about"
+            _hover={{ textDecoration: "none", color: "red" }}
+            _focus={{ outline: "none" }}
+          >
             <Flex alignItems={"center"}>
               <Text>See More About Me</Text>
               <Icon as={BsFillArrowRightSquareFill} w={8} h={4} m={2} />
@@ -121,7 +125,12 @@ const Home = () => {
           </Link>
         </Box>
         <Box p={2} display={"flex"} flexDir={"row"} alignItems={"center"}>
-          <Link href="https://github.com/Sandeep-M23" _hover={{ color: "red" }} _focus={{ outline: "none" }} isExternal>
+          <Link
+            href="https://github.com/Sandeep-M23"
+            _hover={{ color: "red" }}
+            _focus={{ outline: "none" }}
+            isExternal
+          >
             <Icon as={BsGithub} w={10} h={6} mr={2} />
           </Link>
           <Link
