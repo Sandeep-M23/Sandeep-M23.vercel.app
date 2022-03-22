@@ -10,7 +10,7 @@ const ImageCard = () => {
       roundedBottomLeft={8}
       boxShadow="rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px"
       display="flex"
-      backgroundImage="url('https://images.unsplash.com/photo-1503023345310-bd7c1de61c7d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8aHVtYW58ZW58MHx8MHx8&w=1000&q=80')"
+      backgroundImage="url('/assests/images/Image.jpeg')"
       backgroundRepeat="no-repeat"
       backgroundSize="cover"
     >
