@@ -1,5 +1,5 @@
 import React from "react";
-import { IconButton, Link, Stack, Center } from "@chakra-ui/react";
+import { IconButton, Link, Stack, Center, useColorModeValue } from "@chakra-ui/react";
 import { BsGithub, BsLinkedin } from "react-icons/bs";
 
 const ImageCard = () => {
@@ -28,6 +28,7 @@ const ImageCard = () => {
             variant="ghost"
             size="lg"
             fontSize="3xl"
+            color={'white'}
             icon={<BsGithub />}
             isRound
           />
@@ -37,6 +38,7 @@ const ImageCard = () => {
             aria-label="linkedin"
             variant="ghost"
             size="lg"
+            color={'white'}
             icon={<BsLinkedin size="28px" />}
             isRound
           />
