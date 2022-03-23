@@ -39,9 +39,75 @@ const data = [
   },
 ];
 
+const skill = ['MERN Stack','Redux','NextJS','TypeScript','C','Java','GIT','Firebase']
+
 const About = () => {
+  const MotionContainer = motion(Container);
+  const MotionDivider = motion(Divider);
+  const MotionListItem = motion(ListItem);
+  const MotionText = motion(Text);
+
+  const container = {
+    hidden: {
+      opacity: 0,
+    },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.5,
+      },
+    },
+    exit:{
+      opacity:0,
+      transition:{
+        delay:0.2,
+        duration:0.5
+      }
+    }
+  };
+
+  const divider = {
+    hidden: { width: 0 },
+    visible: {
+      width: "100%",
+      transition: {
+        delay: 0.2,
+        duration: 0.8,
+      },
+    },
+  };
+
+  const text = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        delay: 0.4,
+        duration: 0.8,
+      },
+    },
+  };
+
+  const listItem = {
+    visible: i => ({
+      opacity: 1,
+      transition: {
+        delay: i * 0.4,
+      },
+    }),
+    hidden: { opacity: 0 },
+  };
+
+
   return (
-    <Container maxW={"6xl"} mt={8}>
+    <MotionContainer
+      maxW={"6xl"}
+      mt={8}
+      variants={container}
+      initial="hidden"
+      animate="visible"
+      exit="exit"
+    >
       <Stack
         spacing={{ base: 14, lg: 28 }}
         alignItems={"flex-start"}
@@ -55,9 +121,9 @@ const About = () => {
           <Box>
             <Box mb={4}>
               <Heading mb={2}>ABOUT ME</Heading>
-              <Divider height={"3px"} bg={"red"} />
+              <MotionDivider height={"3px"} bg={"red"} variants={divider} />
             </Box>
-            <Text>
+            <MotionText variants={text}>
               I started my journey by learning basics of Web Development and
               making small web Applications using HTML,CSS & Javascript. Later
               learnt MERN Stack and began building full stack web applications
@@ -65,48 +131,33 @@ const About = () => {
               improving my data structure and Algorithm skills. I'm a passionate
               learner who's always willing to learn and work across new
               technologies.
-            </Text>
+            </MotionText>
           </Box>
           <Box width={"100%"}>
             <Box mb={4}>
               <Heading mb={2}>TECHINCAL SKILLS</Heading>
-              <Divider height={"3px"} bg={"red"} />
+              <MotionDivider height={"3px"} bg={"red"} variants={divider} />
             </Box>
             <HStack spacing={32}>
               <List spacing={8}>
-                <ListItem>
-                  <ListIcon as={MdCheckCircle} color="red.500" />
-                  MERN Stack
-                </ListItem>
-                <ListItem>
-                  <ListIcon as={MdCheckCircle} color="red.500" />
-                  Redux
-                </ListItem>
-                <ListItem>
-                  <ListIcon as={MdCheckCircle} color="red.500" />
-                  NextJS
-                </ListItem>
-                <ListItem>
-                  <ListIcon as={MdCheckCircle} color="red.500" />
-                  TypeScript
-                </ListItem>
+                {skill.slice(0,4).map((i, key) => {
+                  return (
+                    <MotionListItem key={key} variants={listItem} animate="visible" initial="hidden" custom={key}>
+                      <ListIcon as={MdCheckCircle} color="red.500" />
+                      {i}
+                    </MotionListItem>
+                  );
+                })}
               </List>
               <List spacing={8}>
-                <ListItem>
-                  <ListIcon as={MdCheckCircle} color="red.500" />C
-                </ListItem>
-                <ListItem>
-                  <ListIcon as={MdCheckCircle} color="red.500" />
-                  Java
-                </ListItem>
-                <ListItem>
-                  <ListIcon as={MdCheckCircle} color="red.500" />
-                  GIT
-                </ListItem>
-                <ListItem>
-                  <ListIcon as={MdCheckCircle} color="red.500" />
-                  Firebase
-                </ListItem>
+              {skill.slice(4,8).map((item, key) => {
+                  return (
+                    <MotionListItem key={key} variants={listItem} animate="visible" initial="hidden" custom={key}>
+                      <ListIcon as={MdCheckCircle} color="red.500" />
+                      {item}
+                    </MotionListItem>
+                  );
+                })}
               </List>
             </HStack>
           </Box>
@@ -114,7 +165,7 @@ const About = () => {
         <Box>
           <Box mb={4}>
             <Heading mb={2}>EDUCATION</Heading>
-            <Divider height={"3px"} bg={"red"} />
+            <MotionDivider height={"3px"} bg={"red"} variants={divider} />
           </Box>
           {data.map((data, index) => (
             <Stepper key={index} data={data} />
@@ -122,7 +173,7 @@ const About = () => {
           <Icon width={5} height={5} mx={2} as={BsCircleFill} color={"red"} />
         </Box>
       </Stack>
-    </Container>
+    </MotionContainer>
   );
 };
 
