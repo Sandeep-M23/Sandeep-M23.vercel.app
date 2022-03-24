@@ -57,18 +57,29 @@ const About = () => {
         staggerChildren: 0.5,
       },
     },
-    exit:{
-      opacity:0,
-      transition:{
-        delay:0.2,
-        duration:0.5
-      }
-    }
+    exit: {
+      opacity: 0,
+      transition: {
+        delay: 0.2,
+        duration: 0.5,
+      },
+    },
   };
 
   const divider = {
     hidden: { width: 0 },
     visible: {
+      width: "100%",
+      transition: {
+        delay: 0.2,
+        duration: 0.8,
+      },
+    },
+  };
+
+  const InViewDivider = {
+    hidden: { width: 0 },
+    whileInView: {
       width: "100%",
       transition: {
         delay: 0.2,
@@ -89,7 +100,7 @@ const About = () => {
   };
 
   const listItem = {
-    visible: i => ({
+    visible: (i) => ({
       opacity: 1,
       transition: {
         delay: i * 0.4,
@@ -97,7 +108,6 @@ const About = () => {
     }),
     hidden: { opacity: 0 },
   };
-
 
   return (
     <MotionContainer
@@ -140,9 +150,15 @@ const About = () => {
             </Box>
             <HStack spacing={32}>
               <List spacing={8}>
-                {skill.slice(0,4).map((i, key) => {
+                {skill.slice(0, 4).map((i, key) => {
                   return (
-                    <MotionListItem key={key} variants={listItem} animate="visible" initial="hidden" custom={key}>
+                    <MotionListItem
+                      key={key}
+                      variants={listItem}
+                      animate="visible"
+                      initial="hidden"
+                      custom={key}
+                    >
                       <ListIcon as={MdCheckCircle} color="red.500" />
                       {i}
                     </MotionListItem>
@@ -150,9 +166,15 @@ const About = () => {
                 })}
               </List>
               <List spacing={8}>
-              {skill.slice(4,8).map((item, key) => {
+                {skill.slice(4, 8).map((item, key) => {
                   return (
-                    <MotionListItem key={key} variants={listItem} animate="visible" initial="hidden" custom={key}>
+                    <MotionListItem
+                      key={key}
+                      variants={listItem}
+                      animate="visible"
+                      initial="hidden"
+                      custom={key}
+                    >
                       <ListIcon as={MdCheckCircle} color="red.500" />
                       {item}
                     </MotionListItem>
@@ -165,7 +187,14 @@ const About = () => {
         <Box>
           <Box mb={4}>
             <Heading mb={2}>EDUCATION</Heading>
-            <MotionDivider height={"3px"} bg={"red"} variants={divider} />
+            <MotionDivider
+              height={"3px"}
+              bg={"red"}
+              variants={InViewDivider}
+              initial="hidden"
+              whileInView="whileInView"
+              viewport={{ once: true }}
+            />
           </Box>
           {data.map((data, index) => (
             <Stepper key={index} data={data} />

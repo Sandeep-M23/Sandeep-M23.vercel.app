@@ -7,16 +7,17 @@ const Stepper = ({ data }) => {
   const MotionDivider = motion(Divider);
   const MotionBox = motion(Box);
 
-  const divider = {
+  const InViewDivider = {
     hidden: { height: 0 },
-    visible: {
+    whileInView: {
       height: "100%",
       transition: {
         delay: 0.2,
         duration: 0.8,
       },
     },
-  };
+  }
+
 
   const box = {
     hidden: { opacity: 0, y: 10 },
@@ -33,12 +34,28 @@ const Stepper = ({ data }) => {
   return (
     <React.Fragment>
       <Box display={"flex"}>
-        <Center height={{base:'auto',lg:'145px'}} flexDir={"column"}>
+        <Center height={{ base: "auto", lg: "145px" }} flexDir={"column"}>
           {/*ON RESPONSIVE HEIGHT=AUTO*/}
           <Icon width={5} height={5} mx={2} as={BsCircle} color={"red"} />
-          <MotionDivider bg={"red"} orientation={"vertical"} variants={divider}/>
+          <MotionDivider
+            bg={"red"}
+            width="1px"
+            orientation={"vertical"}
+            initial="hidden"
+            whileInView="whileInView"
+            viewport={{ once: true }}
+            variants={InViewDivider}
+          />
         </Center>
-        <MotionBox display={"flex"} flexDir={"column"} justifyContent={"flex-start"} mb={4} variants={box} animate="visible" initial="hidden">
+        <MotionBox
+          display={"flex"}
+          flexDir={"column"}
+          justifyContent={"flex-start"}
+          mb={4}
+          variants={box}
+          animate="visible"
+          initial="hidden"
+        >
           <Heading fontSize={"1.35rem"} mb={3} mt={0} mx={2}>
             {data.course}
           </Heading>
