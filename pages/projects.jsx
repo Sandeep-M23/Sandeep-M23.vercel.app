@@ -9,48 +9,57 @@ import {
 } from "@chakra-ui/react";
 import ProjectCard from "../components/UI/Card/ProjectCard";
 import FeaturedCard from "../components/UI/Card/FeaturedCard";
+import { motion } from "framer-motion";
 
 const FeaturedCardDetails = [
   {
-    cardDir:"row", 
-    cardPos:"5%", 
-    cardAlign:"flex-end",
-    title:"Hoodies App",
-    description:"An E-commerce App to purchase fancy and Modern Hoodies",
-    github:"https://github.com/Sandeep-M23/hoodies-app",
-    link:"https://hoodies-app.vercel.app/",
-    languages:['ReactJS','Material-UI','Firebase'],
-    image:'../assests/images/website-Images/screencapture-hoodies-app-vercel-app-2022-03-19-19_17_29.png'
+    cardDir: "row",
+    cardPos: "5%",
+    cardAlign: "flex-end",
+    title: "Hoodies",
+    description:
+      "Hoodies is an E-commerce Application which is used to purchase fancy and Modern Hoodies.The application includes features such as login,Favorites,Shopping Cart and Checkout System.",
+    github: "https://github.com/Sandeep-M23/hoodies-app",
+    link: "https://hoodies-app.vercel.app/",
+    languages: ["ReactJS", "Material-UI", "Firebase"],
+    image:
+      "../assests/images/website-Images/screencapture-hoodies-app-vercel-app-2022-03-19-19_17_29.png",
+    direction: "right",
   },
   {
-    cardDir:"row-reverse", 
-    cardPos:"0", 
-    cardAlign:"flex-start",
-    imagePos:"5" ,
-    title:"Movie WatchList",
-    description:"A Movie Watchlist application that uses TMDB Api to get movie details.",
-    github:"https://github.com/Sandeep-M23/movie-watchList",
-    link:"https://movie-watchlist-flax.vercel.app/",
-    languages:['ReactJS','CSS','Firebase'],
-    image:'../assests/images/website-Images/screencapture-movie-watchlist-flax-vercel-app-2022-03-19-18_55_26.png'
+    cardDir: "row-reverse",
+    cardPos: "0",
+    cardAlign: "flex-start",
+    imagePos: "5%",
+    title: "MovieDirectory",
+    description:
+      "A MovieDirectory is an application that uses TMDB Api to get movie details.In addition to exploring and searching the listed movies, you can also add movies in your watchlists.",
+    github: "https://github.com/Sandeep-M23/MovieDirectory",
+    link: "https://movie-directory.vercel.app/",
+    languages: ["ReactJS", "CSS", "Firebase", "TMDB API"],
+    image:
+      "../assests/images/website-Images/screencapture-movie-watchlist-flax-vercel-app-2022-03-19-18_55_26.png",
   },
   {
-    cardDir:"row", 
-    cardPos:"5%", 
-    cardAlign:"flex-end",
-    title:"Mental Health Matters",
-    description:"This website is created as part of 24 hrs UI Hackathon, Optimize Prime conducted by BMSCE and Hey Coach on 26th Nov 2021 to 27th Nov 2021.",
-    github:"https://github.com/Sandeep-M23/OptimizePrime-BMSCE",
-    link:"https://optimize-prime-bmsce.vercel.app/",
-    languages:['ReactJS','NextJS','TypeScript','Chakra-UI'],
-    image:'../assests/images/website-Images/screencapture-optimize-prime-bmsce-vercel-app-2022-03-19-18_56_58.png'
+    cardDir: "row",
+    cardPos: "5%",
+    cardAlign: "flex-end",
+    title: "Mental Health Matters",
+    description:
+      "This website is created as part of 24 hrs UI Hackathon, Optimize Prime conducted by BMSCE and Hey Coach on 26th Nov 2021 to 27th Nov 2021.",
+    github: "https://github.com/Sandeep-M23/OptimizePrime-BMSCE",
+    link: "https://optimize-prime-bmsce.vercel.app/",
+    languages: ["ReactJS", "NextJS", "TypeScript", "Chakra-UI"],
+    image:
+      "../assests/images/website-Images/screencapture-optimize-prime-bmsce-vercel-app-2022-03-19-18_56_58.png",
+    direction: "right",
   },
-]
+];
 
 const ProjectCardDetails = [
   {
     title: "Blog Publishing Website",
-    description: "A Website for writing Blogs and Publishing them.",
+    description: "Blog-publishing Application used for publishing/editing/deleting blog posts, upload pictures and also allows to bookmark blogs.",
     github: "https://github.com/Sandeep-M23/blog-website-frontend",
     link: "",
     languages:['ReactJS','NodeJS','Express','MongoDB']
@@ -58,36 +67,36 @@ const ProjectCardDetails = [
   {
     title: "Burger Builder",
     description:
-      "A Burger builder is a Web Application built using ReactJs and Redux.",
+      "An Interactive Burger builder Web Application built using ReactJs and ReduxJs. It allows you to customize burger with ingredients and purchase the same.",
     github: "https://github.com/Sandeep-M23/burger-builder",
-    link: "",
+    link: "https://burger-builder-three.vercel.app/",
     languages:['ReactJS','Redux','Firebase']
   },
   {
     title: "Meditation App",
-    description: "A meditation web application with relaxing sounds",
+    description: "Meditation App allows user to select from 3 different ambient sounds & corresponding looped background videos.",
     github: "https://github.com/Sandeep-M23/meditation-app",
     link: "",
     languages:['HTML','CSS','Javascript']
   },
   {
     title: "Dobble Website",
-    description: "UI of a Social Network Webiste like Facebook",
+    description: "UI of a Social Network Website like Facebook developed Using Bootstrap & CSS.",
     github: "https://github.com/Sandeep-M23/dobble-website",
-    link: "",
+    link: "https://sandeep-m23.github.io/Dobble-Website/",
     languages:['HTML','CSS','Bootstrap','Javascript']
   },
   {
     title: "Gamma Website",
-    description: "UI for a Photo Sharing Web Application",
+    description: "Simple UI for a Photo Sharing Web Application developed Using Bootstrap & CSS",
     github: "https://github.com/Sandeep-M23/gamma-website",
-    link: "",
-    languages:['HTML','CSS','Bootstrap']
+    link: "https://sandeep-m23.github.io/Gamma-Website/",
+    languages:['HTML','CSS','Bootstrap'],
   },
   {
     title: "Responsive WebPage Designs",
     description:
-      "Collection of 5 responsive webpages from freeCodeCamp Web Design Certification.",
+      "Collection of 5 responsive webpages made for freeCodecamp Responsive Web Design Certification.",
     github: "https://github.com/Sandeep-M23/responsive-web-design-freeCodeCamp",
     link: "",
     languages:['HTML','CSS']
@@ -95,8 +104,66 @@ const ProjectCardDetails = [
 ];
 
 const Projects = () => {
+  const MotionContainer = motion(Container);
+  const MotionDivider = motion(Divider);
+
+  const container = {
+    hidden: {
+      opacity: 0,
+    },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.5,
+      },
+    },
+    exit:{
+      opacity:0,
+      transition:{
+        delay:0.2,
+        duration:0.5
+      }
+    }
+  };
+
+  const divider = {
+    hidden: { width: 0 },
+    visible: {
+      width: "100%",
+      transition: {
+        delay: 0.2,
+        duration: 0.8,
+      },
+    },
+  };
+
+  const InViewDivider = {
+    hidden: { width: 0 },
+    whileInView: {
+      width: "100%",
+      transition: {
+        delay: 0.2,
+        duration: 0.8,
+      },
+    },
+  }
+
+
   return (
-    <Container maxW={"6xl"} mt={8}>
+    <MotionContainer
+      maxW={"6xl"}
+      mt={8}
+      variants={container}
+      initial="hidden"
+      animate="visible"
+      exit="exit"
+    >
+      <Box mb={4} width={"100%"} rounded={8} p={3}>
+        <Heading mb={2} fontSize={32} textAlign={"flex-start"}>
+          FEATURED PROJECTS
+        </Heading>
+        <MotionDivider height={"3px"} bg={"red"} variants={divider} />
+      </Box>
       <Flex flexDir={"column"} alignItems={"center"}>
         {FeaturedCardDetails.map((data, key) => {
           return <FeaturedCard key={key} data={data} />;
@@ -104,10 +171,17 @@ const Projects = () => {
       </Flex>
       <Flex flexDir={"column"} align={"center"} mt={16} mb={8}>
         <Box mb={4} width={"100%"}>
-          <Heading mb={2} fontSize={32} textAlign={"center"}>
+          <Heading mb={2} fontSize={32} textAlign={"flex-start"}>
             OTHER NOTEWORTHY PROJECTS
           </Heading>
-          <Divider height={"3px"} bg={"red"} />
+          <MotionDivider
+            height={"3px"}
+            bg={"red"}
+            initial="hidden"
+            whileInView="whileInView"
+            viewport={{ once: true }}
+            variants={InViewDivider}
+          />
         </Box>
         <SimpleGrid
           columns={{ base: 1, md: 2, lg: 3 }}
@@ -118,7 +192,7 @@ const Projects = () => {
           })}
         </SimpleGrid>
       </Flex>
-    </Container>
+    </MotionContainer>
   );
 };
 

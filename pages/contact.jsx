@@ -13,8 +13,10 @@ import {
   Heading,
   Text,
   useMediaQuery,
+  Divider,
 } from "@chakra-ui/react";
 import React, { useRef, useState } from "react";
+import { motion } from "framer-motion";
 import emailjs from "@emailjs/browser";
 import { BsPerson } from "react-icons/bs";
 import { MdOutlineEmail } from "react-icons/md";
@@ -31,7 +33,53 @@ const Contact = () => {
     title: "",
     message: "",
   });
-  const [formSubmitted,setFormSubmitted] = useState(false);
+  const [formSubmitted, setFormSubmitted] = useState(false);
+
+  const MotionContainer = motion(Container);
+  const MotionBox = motion(Box);
+  const MotionStack = motion(Stack);
+  const MotionHeading = motion(Heading);
+  const MotionDivider = motion(Divider);
+
+  const container = {
+    hidden: {
+      opacity: 0,
+    },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.5,
+      },
+    },
+    exit: {
+      opacity: 0,
+      transition: {
+        delay: 0.2,
+        duration: 0.5,
+      },
+    },
+  };
+
+  const box = {
+    hidden: { opacity: 0, y: 100 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
+  };
+
+  const stack = {
+    hidden: { opacity: 0, y: 100 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
+  };
+
+  const divider = {
+    hidden: { width: 0 },
+    visible: {
+      width: "13%",
+      transition: {
+        delay: 0.2,
+        duration: 0.8,
+      },
+    },
+  };
 
   const onSubmitHandler = (e) => {
     e.preventDefault();
@@ -73,7 +121,7 @@ const Contact = () => {
         (error) => {
           // eslint-disable-next-line no-console
           console.log(error);
-          setFormSubmitted(true)
+          setFormSubmitted(true);
           setFormMessage({
             title: "Error sending message, try again later",
             paragraph: "Please contact by phone or other social platforms",
@@ -84,61 +132,66 @@ const Contact = () => {
   };
 
   return (
-    <Container maxW={"6xl"} centerContent overflow="hidden">
+    <MotionContainer
+      maxW={"6xl"}
+      centerContent
+      overflow="hidden"
+      initial="hidden"
+      animate="visible"
+      exit="exit"
+      variants={container}
+    >
       <Box borderRadius="lg" m={{ base: 2 }} p={{ base: 2 }} width={"90%"}>
-        <Stack align={"center"}>
-          <Heading
-            fontSize={{ base: "1.7rem", lg: "2.5rem" }}
-            position={"relative"}
-            textAlign="center"
-            maxW={"600px"}
-            _before={{
-              position: "absolute",
-              top: "50%",
-              display: "block",
-              left: { base: "-70px", lg: "-90px" },
-              width: { base: "60px", lg: "80px" },
-              height: "4px",
-              content: '" "',
-              backgroundColor: "red.600",
-            }}
-            _after={{
-              position: "absolute",
-              top: "50%",
-              right: { base: "-70px", lg: "-90px" },
-              width: { base: "60px", lg: "80px" },
-              height: "4px",
-              content: '""',
-              backgroundColor: "red.600",
-            }}
+        <MotionStack align={"center"} variants={stack}>
+          <Box
+            display={"flex"}
+            alignItems={"center"}
+            width={"100%"}
+            justifyContent={"center"}
           >
-            Get In Touch!
-          </Heading>
+            <MotionDivider
+              height={"3px"}
+              bg={"red"}
+              width={"13%"}
+              variants={divider}
+            />
+            <MotionHeading
+              fontSize={{ base: "1.7rem", lg: "2.5rem" }}
+              textAlign="center"
+              mx={3}
+            >
+              Get In Touch!
+            </MotionHeading>
+            <MotionDivider
+              height={"3px"}
+              bg={"red"}
+              width={"13%"}
+              variants={divider}
+            />
+          </Box>
           <Text
             fontSize={{ base: "1rem", lg: "1.2rem" }}
             textAlign={{ base: "center" }}
           >
             Got a question or proposal, or just want to say hello? Go ahead.
           </Text>
-        </Stack>
-        <Box
+        </MotionStack>
+        <MotionBox
           margin={{ base: 2, lg: 4 }}
           mt={8}
           mb={0}
           display={"flex"}
           as={"form"}
           onSubmit={onSubmitHandler}
+          variants={box}
         >
-          {isMobile ? null : <ImageCard />}
           <VStack
             spacing={3}
             width={"100%"}
             p={5}
             bg="white"
             color="black"
-            roundedTopRight={8}
-            roundedBottomRight={8}
-            roundedLeft={{ base: 8, lg: 0 }}
+            rounded={8}
           >
             <FormControl id="name" isRequired>
               <FormLabel>Your Name</FormLabel>
@@ -219,6 +272,7 @@ const Contact = () => {
                 bg="red.500"
                 color="white"
                 _focus={{ outline: "none" }}
+                _active={{bg:'red.500'}}
                 _hover={{
                   bg: "red.700",
                 }}
@@ -227,7 +281,7 @@ const Contact = () => {
               </Button>
             </FormControl>
           </VStack>
-        </Box>
+        </MotionBox>
       </Box>
       {formSubmitted && (
         <SimpleModal
@@ -237,7 +291,7 @@ const Contact = () => {
           onClose={() => setFormSubmitted(false)}
         />
       )}
-    </Container>
+    </MotionContainer>
   );
 };
 
