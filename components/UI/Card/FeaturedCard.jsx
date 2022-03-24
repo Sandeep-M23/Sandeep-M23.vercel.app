@@ -14,30 +14,53 @@ import {
 } from "@chakra-ui/react";
 import { FiExternalLink } from "react-icons/fi";
 import { BsGithub } from "react-icons/bs";
+import {motion} from 'framer-motion';
 
-const FeaturedCard = ({data}) => {
+const FeaturedCard = ({ data }) => {
+  const MotionCenter = motion(Center);
+
+  const center = (direction) => {
+    return {
+      hidden: { opacity: 0, x: direction === "right" ? -100 : 100 },
+      whileInView: {
+        opacity: 1,
+        x: 0,
+        transition:{
+          duration:0.5
+        }
+      },
+    };
+  };
+
   return (
-    <Center py={6}>
+    <MotionCenter
+      py={6}
+      variants={center(data.direction)}
+      initial="hidden"
+      whileInView="whileInView"
+      viewport={{ once: true }}
+    >
       <Stack
         borderRadius="lg"
         w={{ base: "100%" }}
-        height={{ sm: "476px", md: "30rem", lg: "27rem" }}
+        height={{ sm: "476px", md: "30rem", lg: "28rem" }}
         direction={{ base: "column", md: data.cardDir }}
         padding={4}
       >
         <Flex
           flex={1}
-          bg="#2727277d"
+          bg="#272727f2"
           w={{ base: "100%", lg: "50%" }}
           h={"100%"}
           position={"relative"}
+          rounded={8}
           right={{ base: 0, md: data.imagePos }}
           overflow={"hidden"}
         >
           <Image
-            boxSize={"100%"}
+            w={"100%"}
+            h={"100%"}
             opacity={"0.4"}
-            rounded={8}
             _hover={{
               opacity: 1,
             }}
@@ -56,29 +79,50 @@ const FeaturedCard = ({data}) => {
         >
           <Text color="red.600">Featured Project</Text>
           <Heading>{data.title}</Heading>
-          <Text bg={"red"} p={4} rounded={8} mt={{ base: 2, md: 6 }}>
+          <Text
+            bg={"red"}
+            p={4}
+            rounded={8}
+            mt={{ base: 2, md: 6 }}
+            color={"white"}
+          >
             {data.description}
           </Text>
-          <HStack spacing={6} my={3} color={"#c1c1c1"} fontWeight={500}>
+          <HStack
+            spacing={6}
+            my={3}
+            color={useColorModeValue("#000d9", "#c1c1c1")}
+            fontWeight={500}
+          >
             {data.languages.map((i) => {
               return <Text>{i}</Text>;
             })}
           </HStack>
           <HStack spacing={6} my={2}>
             <Tooltip label="Github" fontSize="sm">
-              <Link href={data.github} isExternal>
+              <Link
+                href={data.github}
+                isExternal
+                _hover={{ color: "red" }}
+                _focus={{ outline: "none" }}
+              >
                 <Icon as={BsGithub} w={6} h={6} />
               </Link>
             </Tooltip>
             <Tooltip label="Link" fontSize="sm">
-              <Link href={data.link} isExternal>
+              <Link
+                href={data.link}
+                isExternal
+                _hover={{ color: "red" }}
+                _focus={{ outline: "none" }}
+              >
                 <Icon as={FiExternalLink} w={6} h={6} />
               </Link>
             </Tooltip>
           </HStack>
         </Flex>
       </Stack>
-    </Center>
+    </MotionCenter>
   );
 };
 
