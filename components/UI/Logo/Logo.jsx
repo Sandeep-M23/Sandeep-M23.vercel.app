@@ -7,11 +7,7 @@ const Logo = () => {
     <Box>
       <Link href="/" _focus={{ outline: "none" }}>
         <Image
-          src={
-            colorMode === "light"
-              ? "/assests/images/Logo/LightLogo.png"
-              : "/assests/images/Logo/DarkLogo.png"
-          }
+          src={"/assests/images/Logo/LightLogo.png"}
           alt="Logo"
           maxW={"60px"}
           h={"auto"}

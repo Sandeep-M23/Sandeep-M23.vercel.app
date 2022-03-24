@@ -23,7 +23,7 @@ const FeaturedCardDetails = [
     link: "https://hoodies-app.vercel.app/",
     languages: ["ReactJS", "Material-UI", "Firebase"],
     image:
-      "../assests/images/website-Images/screencapture-hoodies-app-vercel-app-2022-03-19-19_17_29.png",
+      "../assests/images/Website-Images/Hoodie-Website.png",
     direction: "right",
   },
   {
@@ -38,7 +38,7 @@ const FeaturedCardDetails = [
     link: "https://movie-directory.vercel.app/",
     languages: ["ReactJS", "CSS", "Firebase", "TMDB API"],
     image:
-      "../assests/images/website-Images/screencapture-movie-watchlist-flax-vercel-app-2022-03-19-18_55_26.png",
+      "../assests/images/Website-Images/MovieDirectory-Website.png",
   },
   {
     cardDir: "row",
@@ -51,7 +51,7 @@ const FeaturedCardDetails = [
     link: "https://optimize-prime-bmsce.vercel.app/",
     languages: ["ReactJS", "NextJS", "TypeScript", "Chakra-UI"],
     image:
-      "../assests/images/website-Images/screencapture-optimize-prime-bmsce-vercel-app-2022-03-19-18_56_58.png",
+      "../assests/images/Website-Images/Mental-Health-Matters-Website.png",
     direction: "right",
   },
 ];

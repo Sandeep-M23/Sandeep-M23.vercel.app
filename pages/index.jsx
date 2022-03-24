@@ -29,7 +29,7 @@ to {
 
 const Home = () => {
   const LinkBgDarkModeColor = "#272727";
-  const LinkBgLightModeColor = "#f4f1ee";
+  const LinkBgLightModeColor = "#EEEEEE";
   const prefersReducedMotion = usePrefersReducedMotion();
   const [isMobile] = useMediaQuery("(max-width: 768px)");
 
@@ -101,6 +101,7 @@ const Home = () => {
             <Link
               bg={useColorModeValue(LinkBgLightModeColor, LinkBgDarkModeColor)}
               px={3}
+              boxShadow="2xl"
               py={2}
               rounded={6}
               href="/projects"
@@ -196,7 +197,7 @@ const Home = () => {
             animate="visible"
           >
             <Image
-              src="/assests/images/Image.jpeg"
+              src="/assests/images/Profile/Image.jpeg"
               alt="Sandeep M"
               width={"100%"}
               height={"95%"}

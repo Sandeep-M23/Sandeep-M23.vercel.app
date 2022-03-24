@@ -189,7 +189,8 @@ const Contact = () => {
             spacing={3}
             width={"100%"}
             p={5}
-            bg="white"
+            bg="#EEEEEE"
+            boxShadow={"2xl"}
             color="black"
             rounded={8}
           >

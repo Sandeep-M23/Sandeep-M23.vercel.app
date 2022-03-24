@@ -41,7 +41,7 @@ const ProjectCard = ({ data }) => {
         maxW={"500px"}
         w={"405px"}
         h={"330px"}
-        bg={useColorModeValue("#f8f9fa", "#272727")}
+        bg={useColorModeValue("#EEEEEE", "#272727")}
         boxShadow={"2xl"}
         display={"flex"}
         flexDir={"column"}
