@@ -14,6 +14,7 @@ import { MoonIcon, SunIcon, HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
 import { BsFillFileTextFill } from "react-icons/bs";
 import NavLink from "./NavLink/NavLink";
 import Logo from "../UI/Logo/Logo";
+import {motion} from 'framer-motion';
 
 const routes = [
   { name: "About", link: "/about" },
@@ -25,9 +26,34 @@ const NavigationBar = () => {
   const { colorMode, toggleColorMode } = useColorMode();
   const { isOpen, onOpen, onClose } = useDisclosure();
 
+  const MotionBox = motion(Box);
+
+  const box = {
+    hidden: { opacity: 0, y: -100 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.5, staggerChildren: 0.5 },
+    },
+    exit: {
+      opacity: 0,
+      transition: {
+        delay: 0.2,
+        duration: 0.5,
+      },
+    },
+  };
+
   return (
     <>
-      <Box px={{ base: 5, lg: 20 }} py={10}>
+      <MotionBox
+        px={{ base: 5, lg: 20 }}
+        py={10}
+        variants={box}
+        initial="hidden"
+        animate="visible"
+        viewport={{ once: true }}
+      >
         <Flex h={16} alignItems={"center"} justifyContent={"space-between"}>
           <IconButton
             size={"md"}
@@ -107,7 +133,7 @@ const NavigationBar = () => {
             </Stack>
           </Box>
         ) : null}
-      </Box>
+      </MotionBox>
     </>
   );
 };
