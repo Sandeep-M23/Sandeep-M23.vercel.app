@@ -11,7 +11,7 @@ import {
   Link,
 } from "@chakra-ui/react";
 import { MoonIcon, SunIcon, HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
-import {BsFillFileTextFill} from 'react-icons/bs'
+import { BsFillFileTextFill } from "react-icons/bs";
 import NavLink from "./NavLink/NavLink";
 import Logo from "../UI/Logo/Logo";
 
@@ -52,7 +52,11 @@ const NavigationBar = () => {
                   {link.name}
                 </NavLink>
               ))}
-              <Link _hover={{ textDecoration: "none"}} href="/assests/resume/sandeep M.pdf" download="Sandeep M.pdf">
+              <Link
+                _hover={{ textDecoration: "none" }}
+                href="/assests/resume/sandeep M.pdf"
+                download="Sandeep M.pdf"
+              >
                 <Button
                   rightIcon={<BsFillFileTextFill />}
                   bg="red"
@@ -81,19 +85,25 @@ const NavigationBar = () => {
                   {link.name}
                 </NavLink>
               ))}
-              <Button
-                rightIcon={<BsFillFileTextFill />}
-                bg="red"
-                color="white"
-                variant="solid"
-                _focus={{ outline: "none" }}
-                _active={{ bg: "red" }}
-                _hover={{
-                  bg: "red.500",
-                }}
+              <Link
+                _hover={{ textDecoration: "none" }}
+                href="/assests/resume/sandeep M.pdf"
+                download="Sandeep M.pdf"
               >
-                Resume
-              </Button>
+                <Button
+                  rightIcon={<BsFillFileTextFill />}
+                  bg="red"
+                  color="white"
+                  variant="solid"
+                  _focus={{ outline: "none" }}
+                  _active={{ bg: "red" }}
+                  _hover={{
+                    bg: "red.500",
+                  }}
+                >
+                  Resume
+                </Button>
+              </Link>
             </Stack>
           </Box>
         ) : null}
