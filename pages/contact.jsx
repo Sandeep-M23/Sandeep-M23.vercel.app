@@ -12,7 +12,6 @@ import {
   VStack,
   Heading,
   Text,
-  useMediaQuery,
   Divider,
 } from "@chakra-ui/react";
 import React, { useRef, useState } from "react";
@@ -21,9 +20,9 @@ import emailjs from "@emailjs/browser";
 import { BsPerson } from "react-icons/bs";
 import { MdOutlineEmail } from "react-icons/md";
 import SimpleModal from "../components/UI/Modal/Modal";
+import { container, box, stack, ContactDivider } from "../util/Variants";
 
 const Contact = () => {
-  const [isMobile] = useMediaQuery("(max-width: 768px)");
   const nameRef = useRef(null);
   const emailRef = useRef(null);
   const subjectRef = useRef(null);
@@ -39,46 +38,6 @@ const Contact = () => {
   const MotionStack = motion(Stack);
   const MotionHeading = motion(Heading);
   const MotionDivider = motion(Divider);
-
-  const container = {
-    hidden: {
-      opacity: 0,
-    },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.5,
-      },
-    },
-    exit: {
-      opacity: 0,
-      transition: {
-        delay: 0.2,
-        duration: 0.5,
-      },
-    },
-  };
-
-  const box = {
-    hidden: { opacity: 0, y: 100 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
-  };
-
-  const stack = {
-    hidden: { opacity: 0, y: 100 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
-  };
-
-  const divider = {
-    hidden: { width: 0 },
-    visible: {
-      width: "13%",
-      transition: {
-        delay: 0.2,
-        duration: 0.8,
-      },
-    },
-  };
 
   const onSubmitHandler = (e) => {
     e.preventDefault();
@@ -152,7 +111,7 @@ const Contact = () => {
               height={"3px"}
               bg={"red"}
               width={"13%"}
-              variants={divider}
+              variants={ContactDivider}
             />
             <MotionHeading
               fontSize={{ base: "1.7rem", lg: "2.5rem" }}
@@ -165,7 +124,7 @@ const Contact = () => {
               height={"3px"}
               bg={"red"}
               width={"13%"}
-              variants={divider}
+              variants={ContactDivider}
             />
           </Box>
           <Text

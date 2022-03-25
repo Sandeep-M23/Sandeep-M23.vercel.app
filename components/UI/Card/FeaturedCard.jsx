@@ -15,22 +15,10 @@ import {
 import { FiExternalLink } from "react-icons/fi";
 import { BsGithub } from "react-icons/bs";
 import { motion } from "framer-motion";
+import { center } from "../../../util/Variants";
 
 const FeaturedCard = ({ data }) => {
   const MotionCenter = motion(Center);
-
-  const center = (direction) => {
-    return {
-      hidden: { opacity: 0, x: direction === "right" ? -100 : 100 },
-      whileInView: {
-        opacity: 1,
-        x: 0,
-        transition: {
-          duration: 0.5,
-        },
-      },
-    };
-  };
 
   return (
     <MotionCenter

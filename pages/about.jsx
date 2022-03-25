@@ -17,6 +17,13 @@ import { BsCircleFill } from "react-icons/bs";
 import React from "react";
 import Stepper from "../components/UI/Stepper/Stepper";
 import { motion } from "framer-motion";
+import {
+  container,
+  divider,
+  InViewDivider,
+  text,
+  listItem,
+} from "../util/Variants";
 
 const data = [
   {
@@ -55,68 +62,6 @@ const About = () => {
   const MotionDivider = motion(Divider);
   const MotionListItem = motion(ListItem);
   const MotionText = motion(Text);
-
-  const container = {
-    hidden: {
-      opacity: 0,
-    },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.5,
-      },
-    },
-    exit: {
-      opacity: 0,
-      transition: {
-        delay: 0.2,
-        duration: 0.5,
-      },
-    },
-  };
-
-  const divider = {
-    hidden: { width: 0 },
-    visible: {
-      width: "100%",
-      transition: {
-        delay: 0.2,
-        duration: 0.8,
-      },
-    },
-  };
-
-  const InViewDivider = {
-    hidden: { width: 0 },
-    whileInView: {
-      width: "100%",
-      transition: {
-        delay: 0.2,
-        duration: 0.8,
-      },
-    },
-  };
-
-  const text = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        delay: 0.4,
-        duration: 0.8,
-      },
-    },
-  };
-
-  const listItem = {
-    visible: (i) => ({
-      opacity: 1,
-      transition: {
-        delay: i * 0.4,
-      },
-    }),
-    hidden: { opacity: 0 },
-  };
 
   return (
     <MotionContainer

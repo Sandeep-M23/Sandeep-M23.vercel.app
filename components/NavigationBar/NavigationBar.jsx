@@ -14,7 +14,8 @@ import { MoonIcon, SunIcon, HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
 import { BsFillFileTextFill } from "react-icons/bs";
 import NavLink from "./NavLink/NavLink";
 import Logo from "../UI/Logo/Logo";
-import {motion} from 'framer-motion';
+import { motion } from "framer-motion";
+import { NavBox } from "../../util/Variants";
 
 const routes = [
   { name: "About", link: "/about" },
@@ -28,28 +29,12 @@ const NavigationBar = () => {
 
   const MotionBox = motion(Box);
 
-  const box = {
-    hidden: { opacity: 0, y: -100 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 0.5, staggerChildren: 0.5 },
-    },
-    exit: {
-      opacity: 0,
-      transition: {
-        delay: 0.2,
-        duration: 0.5,
-      },
-    },
-  };
-
   return (
     <>
       <MotionBox
         px={{ base: 5, lg: 20 }}
         py={10}
-        variants={box}
+        variants={NavBox}
         initial="hidden"
         animate="visible"
         viewport={{ once: true }}
@@ -80,7 +65,7 @@ const NavigationBar = () => {
               ))}
               <Link
                 _hover={{ textDecoration: "none" }}
-                href="/assests/resume/sandeep M.pdf"
+                href="/assests/resume/Sandeep M.pdf"
                 download="Sandeep M.pdf"
               >
                 <Button
@@ -91,7 +76,7 @@ const NavigationBar = () => {
                   _focus={{ outline: "none" }}
                   _active={{ bg: "red" }}
                   _hover={{
-                    bg: "red.500",
+                    bg: "red.700",
                   }}
                 >
                   Resume
@@ -113,7 +98,7 @@ const NavigationBar = () => {
               ))}
               <Link
                 _hover={{ textDecoration: "none" }}
-                href="/assests/resume/sandeep M.pdf"
+                href="/assests/resume/Sandeep M.pdf"
                 download="Sandeep M.pdf"
               >
                 <Button
@@ -124,7 +109,7 @@ const NavigationBar = () => {
                   _focus={{ outline: "none" }}
                   _active={{ bg: "red" }}
                   _hover={{
-                    bg: "red.500",
+                    bg: "red.700",
                   }}
                 >
                   Resume

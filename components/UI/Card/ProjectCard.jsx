@@ -15,18 +15,10 @@ import {
 import { FiFolder, FiExternalLink } from "react-icons/fi";
 import { BsGithub } from "react-icons/bs";
 import { motion } from "framer-motion";
+import { ProjectCardCenter } from "../../../util/Variants";
 
 const ProjectCard = ({ data }) => {
   const MotionCenter = motion(Center);
-
-  const center = {
-    hidden: { opacity: 0, y: 100 },
-    whileInView: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 0.4 },
-    },
-  };
 
   return (
     <MotionCenter
@@ -35,7 +27,7 @@ const ProjectCard = ({ data }) => {
       initial="hidden"
       whileInView="whileInView"
       viewport={{ once: true }}
-      variants={center}
+      variants={ProjectCardCenter}
     >
       <Box
         maxW={"500px"}

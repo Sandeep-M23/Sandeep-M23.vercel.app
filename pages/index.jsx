@@ -20,6 +20,7 @@ import {
 } from "react-icons/bs";
 import React from "react";
 import { motion } from "framer-motion";
+import { container, box } from "../util/Variants";
 
 const glitch = keyframes`
 to {
@@ -36,29 +37,6 @@ const Home = () => {
   const MotionContainer = motion(Container);
   const MotionBox = motion(Box);
 
-  const container = {
-    hidden: {
-      opacity: 0,
-    },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.5,
-      },
-    },
-    exit: {
-      opacity: 0,
-      transition: {
-        delay: 0.2,
-        duration: 0.5,
-      },
-    },
-  };
-
-  const box = {
-    hidden: { opacity: 0, y: 100 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
-  };
 
   const animation = prefersReducedMotion
     ? undefined

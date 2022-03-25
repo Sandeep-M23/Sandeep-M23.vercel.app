@@ -10,6 +10,7 @@ import {
 import ProjectCard from "../components/UI/Card/ProjectCard";
 import FeaturedCard from "../components/UI/Card/FeaturedCard";
 import { motion } from "framer-motion";
+import { container, divider, InViewDivider } from "../util/Variants";
 
 const FeaturedCardDetails = [
   {
@@ -107,47 +108,6 @@ const ProjectCardDetails = [
 const Projects = () => {
   const MotionContainer = motion(Container);
   const MotionDivider = motion(Divider);
-
-  const container = {
-    hidden: {
-      opacity: 0,
-    },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.5,
-      },
-    },
-    exit: {
-      opacity: 0,
-      transition: {
-        delay: 0.2,
-        duration: 0.5,
-      },
-    },
-  };
-
-  const divider = {
-    hidden: { width: 0 },
-    visible: {
-      width: "100%",
-      transition: {
-        delay: 0.2,
-        duration: 0.8,
-      },
-    },
-  };
-
-  const InViewDivider = {
-    hidden: { width: 0 },
-    whileInView: {
-      width: "100%",
-      transition: {
-        delay: 0.2,
-        duration: 0.8,
-      },
-    },
-  };
 
   return (
     <MotionContainer

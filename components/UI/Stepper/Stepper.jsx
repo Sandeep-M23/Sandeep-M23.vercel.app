@@ -2,33 +2,11 @@ import { Divider, Center, Box, Text, Icon, Heading } from "@chakra-ui/react";
 import { BsCircle } from "react-icons/bs";
 import React from "react";
 import { motion } from "framer-motion";
+import { InViewStepperDivider, StepperBox } from "../../../util/Variants";
 
 const Stepper = ({ data }) => {
   const MotionDivider = motion(Divider);
   const MotionBox = motion(Box);
-
-  const InViewDivider = {
-    hidden: { height: 0 },
-    whileInView: {
-      height: "100%",
-      transition: {
-        delay: 0.2,
-        duration: 0.8,
-      },
-    },
-  };
-
-  const box = {
-    hidden: { opacity: 0, y: 10 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        delay: 0.4,
-        duration: 0.8,
-      },
-    },
-  };
 
   return (
     <React.Fragment>
@@ -43,7 +21,7 @@ const Stepper = ({ data }) => {
             initial="hidden"
             whileInView="whileInView"
             viewport={{ once: true }}
-            variants={InViewDivider}
+            variants={InViewStepperDivider}
           />
         </Center>
         <MotionBox
@@ -51,7 +29,7 @@ const Stepper = ({ data }) => {
           flexDir={"column"}
           justifyContent={"flex-start"}
           mb={4}
-          variants={box}
+          variants={StepperBox}
           animate="visible"
           initial="hidden"
         >
