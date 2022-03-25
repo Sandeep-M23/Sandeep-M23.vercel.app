@@ -20,7 +20,6 @@ import { motion } from "framer-motion";
 import emailjs from "@emailjs/browser";
 import { BsPerson } from "react-icons/bs";
 import { MdOutlineEmail } from "react-icons/md";
-import ImageCard from "../components/UI/Card/ImageCard";
 import SimpleModal from "../components/UI/Modal/Modal";
 
 const Contact = () => {
@@ -273,7 +272,7 @@ const Contact = () => {
                 bg="red.500"
                 color="white"
                 _focus={{ outline: "none" }}
-                _active={{bg:'red.500'}}
+                _active={{ bg: "red.500" }}
                 _hover={{
                   bg: "red.700",
                 }}

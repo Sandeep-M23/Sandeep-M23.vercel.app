@@ -6,10 +6,10 @@ import {
   ModalFooter,
   ModalBody,
   Button,
-  useColorModeValue
+  useColorModeValue,
 } from "@chakra-ui/react";
 
-const SimpleModal = ({isOpen,onClose,message,title}) => {
+const SimpleModal = ({ isOpen, onClose, message, title }) => {
   return (
     <>
       <Modal
@@ -20,7 +20,7 @@ const SimpleModal = ({isOpen,onClose,message,title}) => {
         size="lg"
       >
         <ModalOverlay />
-        <ModalContent bg={useColorModeValue('#f4f1ee','#272727')}>
+        <ModalContent bg={useColorModeValue("#f4f1ee", "#272727")}>
           <ModalHeader>{title}</ModalHeader>
           <ModalBody>{message}</ModalBody>
 

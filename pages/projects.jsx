@@ -22,8 +22,7 @@ const FeaturedCardDetails = [
     github: "https://github.com/Sandeep-M23/hoodies-app",
     link: "https://hoodies-app.vercel.app/",
     languages: ["ReactJS", "Material-UI", "Firebase"],
-    image:
-      "../assests/images/Website-Images/Hoodie-Website.png",
+    image: "../assests/images/Website-Images/Hoodie-Website.png",
     direction: "right",
   },
   {
@@ -37,8 +36,7 @@ const FeaturedCardDetails = [
     github: "https://github.com/Sandeep-M23/MovieDirectory",
     link: "https://movie-directory.vercel.app/",
     languages: ["ReactJS", "CSS", "Firebase", "TMDB API"],
-    image:
-      "../assests/images/Website-Images/MovieDirectory-Website.png",
+    image: "../assests/images/Website-Images/MovieDirectory-Website.png",
   },
   {
     cardDir: "row",
@@ -50,8 +48,7 @@ const FeaturedCardDetails = [
     github: "https://github.com/Sandeep-M23/OptimizePrime-BMSCE",
     link: "https://optimize-prime-bmsce.vercel.app/",
     languages: ["ReactJS", "NextJS", "TypeScript", "Chakra-UI"],
-    image:
-      "../assests/images/Website-Images/Mental-Health-Matters-Website.png",
+    image: "../assests/images/Website-Images/Mental-Health-Matters-Website.png",
     direction: "right",
   },
 ];
@@ -59,10 +56,11 @@ const FeaturedCardDetails = [
 const ProjectCardDetails = [
   {
     title: "Blog Publishing Website",
-    description: "Blog-publishing Application used for publishing/editing/deleting blog posts, upload pictures and also allows to bookmark blogs.",
+    description:
+      "Blog-publishing Application used for publishing/editing/deleting blog posts, upload pictures and also allows to bookmark blogs.",
     github: "https://github.com/Sandeep-M23/blog-website-frontend",
     link: "",
-    languages:['ReactJS','NodeJS','Express','MongoDB']
+    languages: ["ReactJS", "NodeJS", "Express", "MongoDB"],
   },
   {
     title: "Burger Builder",
@@ -70,28 +68,31 @@ const ProjectCardDetails = [
       "An Interactive Burger builder Web Application built using ReactJs and ReduxJs. It allows you to customize burger with ingredients and purchase the same.",
     github: "https://github.com/Sandeep-M23/burger-builder",
     link: "https://burger-builder-three.vercel.app/",
-    languages:['ReactJS','Redux','Firebase']
+    languages: ["ReactJS", "Redux", "Firebase"],
   },
   {
     title: "Meditation App",
-    description: "Meditation App allows user to select from 3 different ambient sounds & corresponding looped background videos.",
+    description:
+      "Meditation App allows user to select from 3 different ambient sounds & corresponding looped background videos.",
     github: "https://github.com/Sandeep-M23/meditation-app",
     link: "",
-    languages:['HTML','CSS','Javascript']
+    languages: ["HTML", "CSS", "Javascript"],
   },
   {
     title: "Dobble Website",
-    description: "UI of a Social Network Website like Facebook developed Using Bootstrap & CSS.",
+    description:
+      "UI of a Social Network Website like Facebook developed Using Bootstrap & CSS.",
     github: "https://github.com/Sandeep-M23/dobble-website",
     link: "https://sandeep-m23.github.io/Dobble-Website/",
-    languages:['HTML','CSS','Bootstrap','Javascript']
+    languages: ["HTML", "CSS", "Bootstrap", "Javascript"],
   },
   {
     title: "Gamma Website",
-    description: "Simple UI for a Photo Sharing Web Application developed Using Bootstrap & CSS",
+    description:
+      "Simple UI for a Photo Sharing Web Application developed Using Bootstrap & CSS",
     github: "https://github.com/Sandeep-M23/gamma-website",
     link: "https://sandeep-m23.github.io/Gamma-Website/",
-    languages:['HTML','CSS','Bootstrap'],
+    languages: ["HTML", "CSS", "Bootstrap"],
   },
   {
     title: "Responsive WebPage Designs",
@@ -99,7 +100,7 @@ const ProjectCardDetails = [
       "Collection of 5 responsive webpages made for freeCodecamp Responsive Web Design Certification.",
     github: "https://github.com/Sandeep-M23/responsive-web-design-freeCodeCamp",
     link: "",
-    languages:['HTML','CSS']
+    languages: ["HTML", "CSS"],
   },
 ];
 
@@ -117,13 +118,13 @@ const Projects = () => {
         staggerChildren: 0.5,
       },
     },
-    exit:{
-      opacity:0,
-      transition:{
-        delay:0.2,
-        duration:0.5
-      }
-    }
+    exit: {
+      opacity: 0,
+      transition: {
+        delay: 0.2,
+        duration: 0.5,
+      },
+    },
   };
 
   const divider = {
@@ -146,8 +147,7 @@ const Projects = () => {
         duration: 0.8,
       },
     },
-  }
-
+  };
 
   return (
     <MotionContainer

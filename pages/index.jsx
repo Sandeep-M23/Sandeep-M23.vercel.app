@@ -11,7 +11,7 @@ import {
   useColorModeValue,
   keyframes,
   usePrefersReducedMotion,
-  useMediaQuery
+  useMediaQuery,
 } from "@chakra-ui/react";
 import {
   BsLinkedin,

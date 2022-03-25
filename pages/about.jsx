@@ -39,7 +39,16 @@ const data = [
   },
 ];
 
-const skill = ['MERN Stack','Redux','NextJS','TypeScript','C','Java','GIT','Firebase']
+const skill = [
+  "MERN Stack",
+  "Redux",
+  "NextJS",
+  "TypeScript",
+  "C",
+  "Java",
+  "GIT",
+  "Firebase",
+];
 
 const About = () => {
   const MotionContainer = motion(Container);

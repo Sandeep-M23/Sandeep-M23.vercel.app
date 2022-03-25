@@ -14,7 +14,7 @@ import {
 } from "@chakra-ui/react";
 import { FiExternalLink } from "react-icons/fi";
 import { BsGithub } from "react-icons/bs";
-import {motion} from 'framer-motion';
+import { motion } from "framer-motion";
 
 const FeaturedCard = ({ data }) => {
   const MotionCenter = motion(Center);
@@ -25,9 +25,9 @@ const FeaturedCard = ({ data }) => {
       whileInView: {
         opacity: 1,
         x: 0,
-        transition:{
-          duration:0.5
-        }
+        transition: {
+          duration: 0.5,
+        },
       },
     };
   };

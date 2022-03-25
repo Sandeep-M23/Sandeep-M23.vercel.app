@@ -16,8 +16,7 @@ const Stepper = ({ data }) => {
         duration: 0.8,
       },
     },
-  }
-
+  };
 
   const box = {
     hidden: { opacity: 0, y: 10 },
@@ -30,7 +29,7 @@ const Stepper = ({ data }) => {
       },
     },
   };
-  
+
   return (
     <React.Fragment>
       <Box display={"flex"}>
