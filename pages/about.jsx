@@ -36,13 +36,13 @@ const data = [
     course: "PCMB",
     year: "2017-2019",
     institution: "The National PU College",
-    grade: "Percentage - 78",
+    grade: "Percentage - 78.25%",
   },
   {
     course: "ISCE",
     year: "2006-2017",
     institution: "Sree Rama Vidyalaya",
-    grade: "Percentage - 83.25",
+    grade: "Percentage - 83%",
   },
 ];
 
