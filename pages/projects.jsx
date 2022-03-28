@@ -14,6 +14,7 @@ import { container, divider, InViewDivider } from "../util/Variants";
 
 const FeaturedCardDetails = [
   {
+    id:1,
     cardDir: "row",
     cardPos: "5%",
     cardAlign: "flex-end",
@@ -27,6 +28,7 @@ const FeaturedCardDetails = [
     direction: "right",
   },
   {
+    id:2,
     cardDir: "row-reverse",
     cardPos: "0",
     cardAlign: "flex-start",
@@ -40,6 +42,7 @@ const FeaturedCardDetails = [
     image: "../assests/images/Website-Images/MovieDirectory-Website.png",
   },
   {
+    id:3,
     cardDir: "row",
     cardPos: "5%",
     cardAlign: "flex-end",
@@ -56,6 +59,7 @@ const FeaturedCardDetails = [
 
 const ProjectCardDetails = [
   {
+    id:1,
     title: "Blog Publishing Website",
     description:
       "Blog-publishing Application used for publishing/editing/deleting blog posts, upload pictures and also allows to bookmark blogs.",
@@ -64,6 +68,7 @@ const ProjectCardDetails = [
     languages: ["ReactJS", "NodeJS", "Express", "MongoDB"],
   },
   {
+    id:2,
     title: "Burger Builder",
     description:
       "An Interactive Burger builder Web Application built using ReactJs and ReduxJs. It allows you to customize burger with ingredients and purchase the same.",
@@ -72,6 +77,7 @@ const ProjectCardDetails = [
     languages: ["ReactJS", "Redux", "Firebase"],
   },
   {
+    id:3,
     title: "Meditation App",
     description:
       "Meditation App allows user to select from 3 different ambient sounds & corresponding looped background videos.",
@@ -80,6 +86,7 @@ const ProjectCardDetails = [
     languages: ["HTML", "CSS", "Javascript"],
   },
   {
+    id:4,
     title: "Dobble Website",
     description:
       "UI of a Social Network Website like Facebook developed Using Bootstrap & CSS.",
@@ -88,6 +95,7 @@ const ProjectCardDetails = [
     languages: ["HTML", "CSS", "Bootstrap", "Javascript"],
   },
   {
+    id:5,
     title: "Gamma Website",
     description:
       "Simple UI for a Photo Sharing Web Application developed Using Bootstrap & CSS",
@@ -96,6 +104,7 @@ const ProjectCardDetails = [
     languages: ["HTML", "CSS", "Bootstrap"],
   },
   {
+    id:6,
     title: "Responsive WebPage Designs",
     description:
       "Collection of 5 responsive webpages made for freeCodecamp Responsive Web Design Certification.",
@@ -125,8 +134,8 @@ const Projects = () => {
         <MotionDivider height={"3px"} bg={"red"} variants={divider} />
       </Box>
       <Flex flexDir={"column"} alignItems={"center"}>
-        {FeaturedCardDetails.map((data, key) => {
-          return <FeaturedCard key={key} data={data} />;
+        {FeaturedCardDetails.map((data) => {
+          return <FeaturedCard key={data.id} data={data} />;
         })}
       </Flex>
       <Flex flexDir={"column"} align={"center"} mt={16} mb={8}>
@@ -147,8 +156,8 @@ const Projects = () => {
           columns={{ base: 1, md: 2, lg: 3 }}
           gap={{ base: 1, md: 2, lg: 4 }}
         >
-          {ProjectCardDetails.map((data, key) => {
-            return <ProjectCard key={key} data={data} />;
+          {ProjectCardDetails.map((data) => {
+            return <ProjectCard key={data.id} data={data} />;
           })}
         </SimpleGrid>
       </Flex>
