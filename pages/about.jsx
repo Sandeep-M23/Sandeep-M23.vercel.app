@@ -51,8 +51,9 @@ const skill = [
   "Redux",
   "NextJS",
   "TypeScript",
-  "C",
   "Java",
+  "GraphQL",
+  "PostgreSQL",
   "GIT",
   "Firebase",
 ];
