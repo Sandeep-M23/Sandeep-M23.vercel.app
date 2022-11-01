@@ -30,7 +30,7 @@ const data = [
     course: "Computer Science and Engineering",
     year: "2019-2023",
     institution: "JSS Academy of Technical Education - Bengaluru",
-    grade: "CGPA - 8.4",
+    grade: "CGPA - 8.21",
   },
   {
     course: "PCMB",
@@ -92,8 +92,9 @@ const About = () => {
               I started my journey by learning basics of Web Development and
               making small web Applications using HTML,CSS & Javascript. Later
               learnt MERN Stack and began building full stack web applications
-              and have worked on few projects. I'm currently working on
-              improving my data structure and Algorithm skills. I'm a passionate
+              and have worked on few projects. I'm working on improving my data
+              structure and Algorithm skills by solving problems in Leetcode and
+              currently have solved more than 100 questions. I'm a passionate
               learner who's always willing to learn and work across new
               technologies.
             </MotionText>
