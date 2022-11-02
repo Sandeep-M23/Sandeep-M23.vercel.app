@@ -68,7 +68,7 @@ const Home = () => {
           </MotionBox>
           <MotionBox p={2} variants={box}>
             <Text>
-              A Web Developer! Currently pursuing 3rd year of Bachelor of
+              A Web Developer! Currently pursuing 4th year of Bachelor of
               Engineering in Computer Science from JSS Academy of Technical
               Education Bengaluru. I&apos;m a passionate learner who&apos;s
               always willing to learn and work across new technologies.
