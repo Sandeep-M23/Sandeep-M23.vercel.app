@@ -18,13 +18,13 @@ const FeaturedCardDetails = [
     cardDir: "row",
     cardPos: "5%",
     cardAlign: "flex-end",
-    title: "Hoodies",
+    title: "Placement Portal",
     description:
-      "Hoodies is an E-commerce Application which is used to purchase fancy and Modern Hoodies.The application includes features such as login,Favorites,Shopping Cart and Checkout System.",
-    github: "https://github.com/Sandeep-M23/hoodies-app",
-    link: "https://hoodies-app.vercel.app/",
-    languages: ["ReactJS", "Material-UI", "Firebase"],
-    image: "../assests/images/Website-Images/Hoodie-Website.png",
+      "The Placement Management portal is a tool for students and administrators to use when coordinating college placement.",
+    github: "https://github.com/VarunSAthreya/placement-management",
+    link: "https://placement-management.vercel.app/",
+    languages: ["NextJS", "GraphQL", "NodeJS", "PostgreSQL", "Typescript"],
+    image: "../assests/images/Website-Images/Placement-Management-Website.png",
     direction: "right",
   },
   {
@@ -33,33 +33,77 @@ const FeaturedCardDetails = [
     cardPos: "0",
     cardAlign: "flex-start",
     imagePos: "5%",
-    title: "MovieDirectory",
+    title: "Hoodies",
     description:
-      "A MovieDirectory is an application that uses TMDB Api to get movie details.In addition to exploring and searching the listed movies, you can also add movies in your watchlists.",
-    github: "https://github.com/Sandeep-M23/MovieDirectory",
-    link: "https://movie-directory.vercel.app/",
-    languages: ["ReactJS", "CSS", "Firebase", "TMDB API"],
-    image: "../assests/images/Website-Images/MovieDirectory-Website.png",
+      "Hoodies is an E-commerce Application which is used to purchase fancy and Modern Hoodies.The application includes features such as login,Favorites,Shopping Cart and Checkout System.",
+    github: "https://github.com/Sandeep-M23/hoodies-app",
+    link: "https://hoodies-app.vercel.app/",
+    languages: ["ReactJS", "Material-UI", "Firebase"],
+    image: "../assests/images/Website-Images/Hoodie-Website.png",
   },
   {
     id:3,
     cardDir: "row",
     cardPos: "5%",
     cardAlign: "flex-end",
-    title: "Mental Health Matters",
+    title: "Rise Against Hunger",
     description:
-      "This website is created as part of 24 hrs UI Hackathon, Optimize Prime conducted by BMSCE and Hey Coach on 26th Nov 2021 to 27th Nov 2021.",
-    github: "https://github.com/Sandeep-M23/OptimizePrime-BMSCE",
-    link: "https://optimize-prime-bmsce.vercel.app/",
-    languages: ["ReactJS", "NextJS", "TypeScript", "Chakra-UI"],
-    image: "../assests/images/Website-Images/Mental-Health-Matters-Website.png",
+      "Rise Against Hungeris an web and mobile app that helps to combat hunger. It provides a forum to donate food and to take surveys for hunger hot-spots. The web portal also has an admin panel to look at each and every detail about the fourm.",
+    github: "https://github.com/VarunSAthreya/rise-against-hunger",
+    link: "http://rise-against-hunger.vercel.app/",
+    languages: ["NextJS", "Chakra UI", "Firebase", "Flutter", "Google Maps API"],
+    image: "../assests/images/Website-Images/Rise-Aganist-Hunger-Website.png",
     direction: "right",
+  },
+  {
+    id:4,
+    cardDir: "row-reverse",
+    cardPos: "0",
+    cardAlign: "flex-start",
+    imagePos: "5%",
+    title: "Hackwell 3.0",
+    description:
+      "Official Website of Hackwell 3.0. An Virtual hackathon conducted by JSSATE-B in association with Honeywell.",
+    github: "https://github.com/VarunSAthreya/hackwell3.0",
+    link: "https://hackwell3-0.vercel.app/",
+    languages: ["NextJS", "Typescript", "Chakra UI","Framer Motion"],
+    image: "../assests/images/Website-Images/Hackwell3.0-Website.png",
   },
 ];
 
 const ProjectCardDetails = [
   {
     id:1,
+    title: "MovieDirectory",
+    description:
+      "A MovieDirectory is an application that uses TMDB Api to get movie details.In addition to exploring and searching the listed movies, you can also add movies in your watchlists.",
+    github: "https://github.com/Sandeep-M23/MovieDirectory",
+    link: "https://movie-directory.vercel.app/",
+    languages: ["ReactJS", "CSS", "Firebase", "TMDB API"],
+  },
+  {
+    id:2,
+    cardDir: "row",
+    cardPos: "5%",
+    cardAlign: "flex-end",
+    title: "Hackwell 4.0",
+    description:
+      "Official Website of Hackwell 4.0. An Virtual hackathon conducted by JSSATE-B in association with Honeywell.",
+    github: "https://github.com/VarunSAthreya/hackwell4.0",
+    link: "https://hackwell4-0.vercel.app/",
+    languages: ["NextJS", "Typescript", "Chakra UI"],
+  },
+  {
+    id:3,
+    title: "Mental Health Matters",
+    description:
+      "This website is created as part of 24 hrs UI Hackathon, Optimize Prime conducted by BMSCE and Hey Coach on 26th Nov 2021 to 27th Nov 2021.",
+    github: "https://github.com/Sandeep-M23/OptimizePrime-BMSCE",
+    link: "https://optimize-prime-bmsce.vercel.app/",
+    languages: ["ReactJS", "NextJS", "TypeScript", "Chakra-UI"],
+  },
+  {
+    id:4,
     title: "Blog Publishing Website",
     description:
       "Blog-publishing Application used for publishing/editing/deleting blog posts, upload pictures and also allows to bookmark blogs.",
@@ -68,49 +112,22 @@ const ProjectCardDetails = [
     languages: ["ReactJS", "NodeJS", "Express", "MongoDB"],
   },
   {
-    id:2,
+    id:5,
     title: "Burger Builder",
     description:
-      "An Interactive Burger builder Web Application built using ReactJs and ReduxJs. It allows you to customize burger with ingredients and purchase the same.",
+      "An Interactive Burger builder Web Application built using ReactJS and ReduxJS. It allows you to customize burger with ingredients and purchase the same.",
     github: "https://github.com/Sandeep-M23/burger-builder",
     link: "https://burger-builder-three.vercel.app/",
     languages: ["ReactJS", "Redux", "Firebase"],
   },
   {
-    id:3,
+    id:6,
     title: "Meditation App",
     description:
       "Meditation App allows user to select from 3 different ambient sounds & corresponding looped background videos.",
     github: "https://github.com/Sandeep-M23/meditation-app",
     link: "",
     languages: ["HTML", "CSS", "Javascript"],
-  },
-  {
-    id:4,
-    title: "Dobble Website",
-    description:
-      "UI of a Social Network Website like Facebook developed Using Bootstrap & CSS.",
-    github: "https://github.com/Sandeep-M23/dobble-website",
-    link: "https://sandeep-m23.github.io/Dobble-Website/",
-    languages: ["HTML", "CSS", "Bootstrap", "Javascript"],
-  },
-  {
-    id:5,
-    title: "Gamma Website",
-    description:
-      "Simple UI for a Photo Sharing Web Application developed Using Bootstrap & CSS",
-    github: "https://github.com/Sandeep-M23/gamma-website",
-    link: "https://sandeep-m23.github.io/Gamma-Website/",
-    languages: ["HTML", "CSS", "Bootstrap"],
-  },
-  {
-    id:6,
-    title: "Responsive WebPage Designs",
-    description:
-      "Collection of 5 responsive webpages made for freeCodecamp Responsive Web Design Certification.",
-    github: "https://github.com/Sandeep-M23/responsive-web-design-freeCodeCamp",
-    link: "",
-    languages: ["HTML", "CSS"],
   },
 ];
 
