@@ -31,7 +31,7 @@ const FeaturedCard = ({ data }) => {
       <Stack
         borderRadius="lg"
         w={{ base: "100%" }}
-        height={{ sm: "476px", md: "30rem", lg: "28rem" }}
+        height={{ sm: "476px", md: "32rem", lg: "30rem" }}
         direction={{ base: "column", md: data.cardDir }}
         padding={4}
       >
