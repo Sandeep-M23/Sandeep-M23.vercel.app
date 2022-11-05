@@ -96,6 +96,23 @@ const Home = () => {
             <Link
               bg={useColorModeValue(LinkBgLightModeColor, LinkBgDarkModeColor)}
               px={3}
+              boxShadow="2xl"
+              py={2}
+              rounded={6}
+              href="/work"
+              _hover={{
+                textDecoration: "none",
+                bg: "red",
+                color: "white",
+              }}
+              _focus={{ outline: "none" }}
+            >
+              Work
+            </Link>
+            ,{"  "}
+            <Link
+              bg={useColorModeValue(LinkBgLightModeColor, LinkBgDarkModeColor)}
+              px={3}
               py={2}
               rounded={6}
               href="/contact"
