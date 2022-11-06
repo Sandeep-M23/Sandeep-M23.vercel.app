@@ -19,6 +19,7 @@ import { NavBox } from "../../util/Variants";
 
 const routes = [
   { name: "About", link: "/about" },
+  { name: "Work", link: "/work" },
   { name: "Projects", link: "/projects" },
   { name: "Contact", link: "/contact" },
 ];
