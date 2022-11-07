@@ -23,7 +23,7 @@ const FeaturedCardDetails = [
       "The Placement Management portal is a tool for students and administrators to use when coordinating college placement.",
     github: "https://github.com/VarunSAthreya/placement-management",
     link: "https://placement-management.vercel.app/",
-    languages: ["NextJS", "GraphQL", "NodeJS", "PostgreSQL", "Typescript"],
+    languages: ["NextJS", "GraphQL", "NodeJS","PostgreSQL"],
     image: "../assests/images/Website-Images/Placement-Management-Website.png",
     direction: "right",
   },
