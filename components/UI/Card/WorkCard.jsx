@@ -9,9 +9,13 @@ import {
     Heading,
     useColorModeValue,
   } from '@chakra-ui/react';
-  import { BsArrowRightCircleFill} from 'react-icons/bs'
+  import { BsArrowRightCircleFill} from 'react-icons/bs';
+  import {motion } from 'framer-motion';
+  import {boxItem,flex, secondaryBox} from '../../../util/Variants';
   
 const WorkCard = ({data}) => {
+  const MotionBox= motion(Box);
+  const MotionFlex = motion(Flex);
     return (
       <Flex
         justifyContent={"space-between"}
@@ -19,7 +23,7 @@ const WorkCard = ({data}) => {
         py={{ base: 14 }}
       >
         <Stack spacing={{ base: 6 }}>
-          <Box as={"header"}>
+          <MotionBox as={"header"} variants={secondaryBox}>
             <Heading
               lineHeight={1.1}
               fontWeight={600}
@@ -29,11 +33,11 @@ const WorkCard = ({data}) => {
             </Heading>
             <Box
               display={"flex"}
-              flexDir={{ base: "column", md: "row" }}
+              flexDir={"row"}
               alignItems={{ base: "baseline", md: "center" }}
               justifyContent={"space-between"}
               w={{ base: "100%", md: "50%" }}
-              my={2}
+              my={{ base: 1, md: 2 }}
             >
               <Link
                 href={data.link}
@@ -58,7 +62,7 @@ const WorkCard = ({data}) => {
                 ( {data.duration} )
               </Text>
             </Box>
-          </Box>
+          </MotionBox>
           <Flex
             justifyContent={"space-between"}
             alignItems={"center"}
@@ -67,7 +71,16 @@ const WorkCard = ({data}) => {
             <Box width={{ base: "100%", md: "60%" }} my={{ base: 4, md: 0 }}>
               {data.responsibilities.map((r, i) => {
                 return (
-                  <Box key={i} display={"flex"} alignItems={"center"} p={1}>
+                  <MotionBox
+                    key={i}
+                    display={"flex"}
+                    alignItems={"center"}
+                    p={1}
+                    variants={boxItem}
+                    animate="visible"
+                    initial="hidden"
+                    custom={i}
+                  >
                     <Icon
                       as={BsArrowRightCircleFill}
                       w={4}
@@ -76,11 +89,11 @@ const WorkCard = ({data}) => {
                       color="red.500"
                     />
                     <Text p={1}>{r}</Text>
-                  </Box>
+                  </MotionBox>
                 );
               })}
             </Box>
-            <Flex justifyContent={"center"}>
+            <MotionFlex justifyContent={"center"} variants={flex}>
               <Image
                 rounded={"md"}
                 bg="white"
@@ -92,7 +105,7 @@ const WorkCard = ({data}) => {
                 w={"100%"}
                 h={{ base: "75%" }}
               />
-            </Flex>
+            </MotionFlex>
           </Flex>
         </Stack>
       </Flex>
