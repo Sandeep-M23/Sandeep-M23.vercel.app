@@ -21,7 +21,7 @@ const FeaturedCardDetails = [
     title: "Placement Portal",
     description:
       "The Placement Management portal is a tool for students and administrators to use when coordinating college placement.",
-    github: "https://github.com/VarunSAthreya/placement-management",
+    github: "https://github.com/Sandeep-M23/placement-management",
     link: "https://placement-management.vercel.app/",
     languages: ["NextJS", "GraphQL", "NodeJS","PostgreSQL"],
     image: "../assests/images/Website-Images/Placement-Management-Website.png",
@@ -33,6 +33,19 @@ const FeaturedCardDetails = [
     cardPos: "0",
     cardAlign: "flex-start",
     imagePos: "5%",
+    title: "Metal Health Matters",
+    description:
+      "Mental Health Matters is a web app that is used to schedule appointments and take surveys which is used to for resolving mental health-related issues.",
+    github: "https://github.com/Sandeep-M23/mental-health-matters",
+    link: "https://mental-health-matters.vercel.app/",
+    languages: ["NextJS", "NodeJS", "Typescript", "PostgreSQL", "TRPC"],
+    image: "../assests/images/Website-Images/Mental-Health-Matters-2.png",
+  },  
+  {
+    id:3,
+    cardDir: "row",
+    cardPos: "5%",
+    cardAlign: "flex-end",
     title: "Hoodies",
     description:
       "Hoodies is an E-commerce Application which is used to purchase fancy and Modern Hoodies.The application includes features such as login,Favorites,Shopping Cart and Checkout System.",
@@ -42,32 +55,19 @@ const FeaturedCardDetails = [
     image: "../assests/images/Website-Images/Hoodie-Website.png",
   },
   {
-    id:3,
-    cardDir: "row",
-    cardPos: "5%",
-    cardAlign: "flex-end",
-    title: "Rise Against Hunger",
-    description:
-      "Rise Against Hungeris an web and mobile app that helps to combat hunger. It provides a forum to donate food and to take surveys for hunger hot-spots. The web portal also has an admin panel to look at each and every detail about the fourm.",
-    github: "https://github.com/VarunSAthreya/rise-against-hunger",
-    link: "http://rise-against-hunger.vercel.app/",
-    languages: ["NextJS", "Chakra UI", "Firebase", "Flutter", "Google Maps API"],
-    image: "../assests/images/Website-Images/Rise-Aganist-Hunger-Website.png",
-    direction: "right",
-  },
-  {
     id:4,
     cardDir: "row-reverse",
     cardPos: "0",
     cardAlign: "flex-start",
-    imagePos: "5%",
-    title: "Hackwell 3.0",
+    imagePos:"5%",
+    title: "Rise Against Hunger",
     description:
-      "Official Website of Hackwell 3.0. An Virtual hackathon conducted by JSSATE-B in association with Honeywell.",
-    github: "https://github.com/VarunSAthreya/hackwell3.0",
-    link: "https://hackwell3-0.vercel.app/",
-    languages: ["NextJS", "Typescript", "Chakra UI","Framer Motion"],
-    image: "../assests/images/Website-Images/Hackwell3.0-Website.png",
+      "Rise Against Hungeris an web and mobile app that helps to combat hunger. It provides a forum to donate food and to take surveys for hunger hot-spots. The web portal also has an admin panel to look at each and every detail about the fourm.",
+    github: "https://github.com/Sandeep-M23/rise-against-hunger",
+    link: "http://rise-against-hunger.vercel.app/",
+    languages: ["NextJS", "Chakra UI", "Firebase", "Flutter", "Google Maps API"],
+    image: "../assests/images/Website-Images/Rise-Aganist-Hunger-Website.png",
+    direction: "right",
   },
 ];
 
@@ -83,18 +83,24 @@ const ProjectCardDetails = [
   },
   {
     id:2,
-    cardDir: "row",
-    cardPos: "5%",
-    cardAlign: "flex-end",
+    title: "Hackwell 3.0",
+    description:
+      "Official Website of Hackwell 3.0. An Virtual hackathon conducted by JSSATE-B in association with Honeywell.",
+    github: "https://github.com/Sandeep-M23/Hackwell3.0",
+    link: "https://hackwell3-0.vercel.app/",
+    languages: ["NextJS", "Typescript", "Chakra UI","Framer Motion"],
+  },
+  {
+    id:3,
     title: "Hackwell 4.0",
     description:
       "Official Website of Hackwell 4.0. An Virtual hackathon conducted by JSSATE-B in association with Honeywell.",
-    github: "https://github.com/VarunSAthreya/hackwell4.0",
+    github: "https://github.com/Sandeep-M23/Hackwell4.0",
     link: "https://hackwell4-0.vercel.app/",
     languages: ["NextJS", "Typescript", "Chakra UI"],
   },
   {
-    id:3,
+    id:4,
     title: "Mental Health Matters",
     description:
       "This website is created as part of 24 hrs UI Hackathon, Optimize Prime conducted by BMSCE and Hey Coach on 26th Nov 2021 to 27th Nov 2021.",
@@ -103,7 +109,7 @@ const ProjectCardDetails = [
     languages: ["ReactJS", "NextJS", "TypeScript", "Chakra-UI"],
   },
   {
-    id:4,
+    id:5,
     title: "Blog Publishing Website",
     description:
       "Blog-publishing Application used for publishing/editing/deleting blog posts, upload pictures and also allows to bookmark blogs.",
@@ -112,22 +118,13 @@ const ProjectCardDetails = [
     languages: ["ReactJS", "NodeJS", "Express", "MongoDB"],
   },
   {
-    id:5,
+    id:6,
     title: "Burger Builder",
     description:
       "An Interactive Burger builder Web Application built using ReactJS and ReduxJS. It allows you to customize burger with ingredients and purchase the same.",
     github: "https://github.com/Sandeep-M23/burger-builder",
     link: "https://burger-builder-three.vercel.app/",
     languages: ["ReactJS", "Redux", "Firebase"],
-  },
-  {
-    id:6,
-    title: "Meditation App",
-    description:
-      "Meditation App allows user to select from 3 different ambient sounds & corresponding looped background videos.",
-    github: "https://github.com/Sandeep-M23/meditation-app",
-    link: "",
-    languages: ["HTML", "CSS", "Javascript"],
   },
 ];
 
