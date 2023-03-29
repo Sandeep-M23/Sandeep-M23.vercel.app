@@ -52,10 +52,10 @@ const Contact = () => {
 
     emailjs
       .send(
-        "service_6plk3re",
+        "service_74k06az",
         "template_1u212jk",
         templateParams,
-        "KcwfnCu4p4AJfccFi"
+        "LYvGTZ9808EWllPcj"
       )
       .then(
         ({ status }) => {
