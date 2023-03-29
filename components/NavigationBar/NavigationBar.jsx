@@ -99,7 +99,7 @@ const NavigationBar = () => {
               ))}
               <Link
                 _hover={{ textDecoration: "none" }}
-                href="/assests/Sandeep M.pdf"
+                href="/assests/resume/Sandeep M.pdf"
                 download="Sandeep M.pdf"
               >
                 <Button
