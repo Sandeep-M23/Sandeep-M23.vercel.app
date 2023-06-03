@@ -24,6 +24,32 @@ const workDetails = [
           "Made Use of React Context API to create central store for State Management and dependency injection.",
           "Also worked with latest technologies in react ecosystem such as NextJS and Strapi."
         ]
+    },
+    {
+      id:2,
+      jobTitle:'Public Cloud Intern',
+      company:'Getronics Pvt Limited',
+      link:'http://www.getronics.com/',
+      image:'../assests/images/Work/Getronics.jpg',
+      duration:'March 2023 - May 2023',
+      responsibilities:[
+        "Worked as an Public Cloud Intern in Azure and AWS Environments Respectively.",
+        "Implemented security measures such as access control and network security groups to ensure the integrity of Azure resources.",
+        "Automated repetitive tasks and processes using PowerShell, Azure CLI, or Azure Resource Manager",
+        "Optimized cloud costs and generated reports for resource usage  using CoreStack."
+      ]
+    },
+    {
+      id:3,
+      jobTitle:'Jr Developer Intern',
+      company:'OpenInApp',
+      link:'https://openinapp.com/',
+      image:'../assests/images/Work/OpenInApp.png',
+      duration:'May 2023 - Present',
+      responsibilities:[
+        "Working as an Jr.Frontend Developer, in OpeninApp a smart link generator tool that ensures all social media links  open in the apps as they should.",
+        "Collaborating with the development team to implement front-end features and functionalities using Next.js."
+      ]
     }
 ]
 
