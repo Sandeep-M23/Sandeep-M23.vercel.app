@@ -53,7 +53,8 @@ const WorkCard = ({data}) => {
                   @{data.company}
                 </Text>
               </Link>
-              <Text
+              {data.duration && (
+                <Text
                 color={useColorModeValue("#000d9", "#c1c1c1")}
                 fontWeight={500}
                 fontSize={{ base: "0.8rem", md: "1rem" }}
@@ -61,6 +62,7 @@ const WorkCard = ({data}) => {
               >
                 ( {data.duration} )
               </Text>
+              )}
             </Box>
           </MotionBox>
           <Flex
@@ -93,7 +95,9 @@ const WorkCard = ({data}) => {
                 );
               })}
             </Box>
-            <MotionFlex justifyContent={"center"} variants={flex}>
+            {
+              data.image && (
+                <MotionFlex justifyContent={"center"} variants={flex}>
               <Image
                 rounded={"md"}
                 bg="white"
@@ -106,6 +110,8 @@ const WorkCard = ({data}) => {
                 h={{ base: "75%" }}
               />
             </MotionFlex>
+              )
+            }
           </Flex>
         </Stack>
       </Flex>

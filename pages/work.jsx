@@ -11,22 +11,33 @@ import { container, divider} from "../util/Variants";
 import WorkCard from "../components/UI/Card/WorkCard";
 
 const workDetails = [
+  {
+    id:1,
+    jobTitle:'Frontend Developer',
+    company:'OpenInApp',
+    link:'https://openinapp.com/',
+    image:'../assests/images/Work/OpenInApp.jpg',
+    duration:'September 2023 - Present',
+    responsibilities:[
+      "Working as an Jr.Frontend Developer, in OpeninApp a smart link generator tool that ensures all social media links  open in the apps as they should.",
+      "Collaborating with the development team to implement front-end features and functionalities using Next.js."
+    ]
+  },
+  {
+    id:2,
+    jobTitle:'Jr Developer Intern',
+    company:'OpenInApp',
+    link:'https://openinapp.com/',
+    image:'../assests/images/Work/OpenInApp.jpg',
+    responsibilities:[
+      "Developed dynamic and responsive interfaces with Next.js, Jotai, and Tailwind CSS.",
+      "Managed async API requests for dynamic content rendering, achieving a 25% improvement.",
+      "Integrated WebSocket (Pusher) for real-time updates and dynamic notifications in the platform."
+
+    ]
+  },
     {
-        id:1,
-        jobTitle:'Front-End Developer Intern',
-        company:'Project42 Labs',
-        link:'https://project42labs.com/',
-        image:'../assests/images/Work/Project42-Labs.png',
-        duration:'May 2022 - Aug 2022',
-        responsibilities:[
-          "Worked as an Frontend Developer performing tasks such as seamlessly Integrating frontend with Server Rest API.",
-          "Collaborated with back-end developers and designers to strike a balance between functional and aesthetic design.",
-          "Made Use of React Context API to create central store for State Management and dependency injection.",
-          "Also worked with latest technologies in react ecosystem such as NextJS and Strapi."
-        ]
-    },
-    {
-      id:2,
+      id:3,
       jobTitle:'Public Cloud Intern',
       company:'Getronics Pvt Limited',
       link:'http://www.getronics.com/',
@@ -40,17 +51,20 @@ const workDetails = [
       ]
     },
     {
-      id:3,
-      jobTitle:'Jr Developer Intern',
-      company:'OpenInApp',
-      link:'https://openinapp.com/',
-      image:'../assests/images/Work/OpenInApp.png',
-      duration:'May 2023 - Present',
+      id:4,
+      jobTitle:'Front-End Developer Intern',
+      company:'Project42 Labs',
+      link:'https://project42labs.com/',
+      image:'../assests/images/Work/Project42-Labs.png',
+      duration:'May 2022 - Aug 2022',
       responsibilities:[
-        "Working as an Jr.Frontend Developer, in OpeninApp a smart link generator tool that ensures all social media links  open in the apps as they should.",
-        "Collaborating with the development team to implement front-end features and functionalities using Next.js."
+        "Worked as an Frontend Developer performing tasks such as seamlessly Integrating frontend with Server Rest API.",
+        "Collaborated with back-end developers and designers to strike a balance between functional and aesthetic design.",
+        "Made Use of React Context API to create central store for State Management and dependency injection.",
+        "Also worked with latest technologies in react ecosystem such as NextJS and Strapi."
       ]
-    }
+  },
+  
 ]
 
 const Work = () => {
