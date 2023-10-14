@@ -13,7 +13,7 @@ const App = ({ Component, pageProps, router }) => {
       </Head>
       <ChakraProvider theme={theme}>
         <AnimatePresence exitBeforeEnter>
-          <NavigationBar /> {/*CHANGED LOCATION FOR GLOBAL REFERENCE*/}
+          <NavigationBar /> 
           <Component {...pageProps} key={router.route} />
         </AnimatePresence>
       </ChakraProvider>
