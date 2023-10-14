@@ -68,10 +68,10 @@ const Home = () => {
           </MotionBox>
           <MotionBox p={2} variants={box}>
             <Text>
-              A Web Developer! Currently pursuing 4th year of Bachelor of
-              Engineering in Computer Science from JSS Academy of Technical
-              Education Bengaluru. I&apos;m a passionate learner who&apos;s
-              always willing to learn and work across new technologies.
+              A Web Developer! A recent graduate with a B.E. in
+              Computer Science from JSSATE - Bengaluru.<br/> I&apos;m a passionate learner & problem-solving enthusiast
+              who&apos;s always willing to learn and work across new
+              technologies.
             </Text>
           </MotionBox>
           <MotionBox p={2} lineHeight={{ base: 10 }} variants={box}>
